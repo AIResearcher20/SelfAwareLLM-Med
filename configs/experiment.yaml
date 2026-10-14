@@ -1,0 +1,33 @@
+data:
+  source: jsonl
+  jsonl_path: data/sample_100.jsonl
+  sample_ids_path: null
+  # For the full run, switch to:
+  # source: hf
+  # dataset_name: GBaker/MedQA-USMLE-4-options
+  # split: test
+  # limit: 100
+  # sample_seed: 13
+
+model:
+  gen_model: llama3.2:3b
+  embed_model: nomic-embed-text
+  base_url: http://localhost:11434
+  timeout_s: 120.0
+
+seed: 13
+consistency_temperature: 1.0
+evaluation_temperature: 0.7
+
+fixed:
+  n_samples: 5
+
+adaptive:
+  threshold: 0.85
+  min_samples: 3
+  max_samples: 10
+
+auas:
+  uncertainty_threshold: 0.15
+  min_samples: 2
+  max_samples: 10
