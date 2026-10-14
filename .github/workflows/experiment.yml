@@ -1,0 +1,103 @@
+name: experiment
+
+on:
+  workflow_dispatch:
+    inputs:
+      num_questions:
+        description: "Number of questions to run (small first, e.g. 5)"
+        required: true
+        default: "5"
+      source:
+        description: "jsonl or hf"
+        required: true
+        default: "jsonl"
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: install python deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -e .
+
+      - name: install ollama
+        run: |
+          curl -fsSL https://ollama.com/install.sh | sh
+
+      - name: cache ollama models
+        uses: actions/cache@v4
+        with:
+          path: ~/.ollama
+          key: ollama-${{ runner.os }}-llama3.2-3b-nomic-embed-text
+
+      - name: start ollama
+        run: |
+          nohup ollama serve > /tmp/ollama.log 2>&1 &
+          sleep 5
+
+      - name: pull models
+        run: |
+          ollama pull llama3.2:3b
+          ollama pull nomic-embed-text
+          ollama list
+
+      - name: build config
+        run: |
+          python - <<'PY'
+          import yaml, pathlib
+          src = pathlib.Path("configs/experiment.yaml").read_text()
+          cfg = yaml.safe_load(src)
+          cfg["data"]["source"] = "${{ inputs.source }}"
+          if cfg["data"]["source"] == "hf":
+              cfg["data"]["limit"] = int("${{ inputs.num_questions }}")
+          else:
+              cfg["data"]["jsonl_path"] = "data/sample_100.jsonl"
+          pathlib.Path("configs/run.yaml").write_text(yaml.safe_dump(cfg))
+          PY
+
+      - name: truncate jsonl for small runs
+        if: inputs.source == 'jsonl'
+        run: |
+          python - <<'PY'
+          import pathlib
+          n = int("${{ inputs.num_questions }}")
+          p = pathlib.Path("data/sample_100.jsonl")
+          lines = p.read_text(encoding="utf-8").splitlines()
+          pathlib.Path("data/sample_run.jsonl").write_text(
+              "\n".join(lines[:n]) + "\n", encoding="utf-8"
+          )
+          print(f"kept {n} of {len(lines)} questions")
+          PY
+          python - <<'PY'
+          import yaml, pathlib
+          cfg = yaml.safe_load(pathlib.Path("configs/run.yaml").read_text())
+          cfg["data"]["jsonl_path"] = "data/sample_run.jsonl"
+          pathlib.Path("configs/run.yaml").write_text(yaml.safe_dump(cfg))
+          PY
+
+      - name: run experiment
+        run: |
+          python -m selfaware_med.cli --config configs/run.yaml --out-dir results
+
+      - name: upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: results-${{ inputs.source }}-${{ inputs.num_questions }}
+          path: |
+            results/*.csv
+            results/*.png
+            results/*.json
+          if-no-files-found: warn
+          retention-days: 14
