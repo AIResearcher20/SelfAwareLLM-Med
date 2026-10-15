@@ -11,10 +11,10 @@ from pathlib import Path
 import yaml
 
 from .data import filter_by_ids, load_hf, load_jsonl
-from .experiment import run_experiment
+from .experiment import run_experiment, save_responses_csv
 from .model import EmbeddingCache, OllamaModel
 from .reporting import (
-    plot_consistency_vs_rouge,
+    plot_consistency_vs_metrics,
     records_to_frame,
     save_per_method_csvs,
     save_run_metadata,
@@ -34,7 +34,8 @@ def _load_items(config: dict):
 
     if source == "hf":
         items = load_hf(
-            dataset_name=data_cfg.get("dataset_name", "GBaker/MedQA-USMLE-4-options"),
+            dataset_name=data_cfg.get("dataset_name", "awinml/medqa"),
+            config=data_cfg.get("config", "questions"),
             split=data_cfg.get("split", "test"),
             limit=data_cfg.get("limit"),
             seed=data_cfg.get("sample_seed", 13),
@@ -80,16 +81,17 @@ def main(argv: list[str] | None = None) -> int:
     )
 
     started = dt.datetime.utcnow().isoformat() + "Z"
-    records = run_experiment(items, client, config)
+    records, raw_outcomes = run_experiment(items, client, config)
     finished = dt.datetime.utcnow().isoformat() + "Z"
 
     df = records_to_frame(records)
     csv_paths = save_per_method_csvs(df, out_dir)
+    response_paths = save_responses_csv(raw_outcomes, out_dir)
 
     summary = spearman_summary(df)
     save_summary_json(summary, client.stats(), config, out_dir / "summary.json")
 
-    plot_consistency_vs_rouge(df, out_dir / "comparison.png")
+    plot_consistency_vs_metrics(df, out_dir / "comparison.png")
 
     metadata = {
         "started_utc": started,
@@ -101,6 +103,7 @@ def main(argv: list[str] | None = None) -> int:
         "embed_model": client.embed_model,
         "n_items": len(items),
         "csv_files": {k: str(v) for k, v in csv_paths.items()},
+        "response_files": {k: str(v) for k, v in response_paths.items()},
     }
     save_run_metadata(metadata, out_dir / "run_metadata.json")
 
