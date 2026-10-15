@@ -18,10 +18,10 @@ fixed:
 
 adaptive:
   threshold: 0.85
-  min_samples: 3
-  max_samples: 10
+  min_samples: 4
+  max_samples: 5
 
 auas:
   uncertainty_threshold: 0.15
-  min_samples: 2
-  max_samples: 10
+  min_samples: 4
+  max_samples: 5
