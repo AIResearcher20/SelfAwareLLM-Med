@@ -1,0 +1,797 @@
+qid,evaluation_response,evaluation_starts_with_letter,consistency_responses
+medqa_test_0000,"A
+
+This is a classic case of ""harm"" being present even if it's not immediately apparent. Reporting the incident is the correct course of action.",1,"A
+
+""The resident should disclose the error to the patient, as this is in line with the Joint Commission’s do not use or disclosure policy"" ||| A. ||| A
+
+The resident's responsibility is to maintain patient confidentiality and report all relevant medical information, even if the resident believes it may cause worry to the patient. ||| A
+
+The resident should disclose the error to the patient and document it in the operative report, as transparency and accountability are crucial aspects of maintaining trust with patients and ensuring accurate medical records. ||| A
+
+Patient informs, accurate documentation."
+medqa_test_0001,B,1,B ||| B ||| B ||| C ||| D
+medqa_test_0002,B,1,B ||| B ||| B ||| B
+medqa_test_0003,B,1,B ||| B ||| B ||| B
+medqa_test_0004,B,1,B ||| B ||| B ||| B
+medqa_test_0005,"B
+
+Labetalol",1,"C
+
+Propranolol can worsen ischemia by causing vasodilation and should be avoided in this scenario. ||| B
+
+Labetalol ||| D ||| D ||| B"
+medqa_test_0006,"A
+ 
+Dilation of the right ureter and renal pelvis due to urinary tract obstruction, often seen in benign prostatic hyperplasia (BPH) in older men.",1,"A
+ 
+(Anatomical details of the urinary system, such as renal arteries and ureters, may be compromised by atherosclerosis due to peripheral artery disease.) ||| A
+
+Blood clots (thrombi) in the renal artery are associated with renal artery stenosis, which can cause dilation of the ureter and renal pelvis. ||| A
+ 
+Renal artery stenosis is the correct answer. ||| C ||| C"
+medqa_test_0007,B,1,B. ||| C ||| C. ||| B ||| C
+medqa_test_0008,D,1,A. A history of stroke or venous thromboembolism ||| B ||| A. ||| C ||| C
+medqa_test_0009,B,1,B ||| B ||| A. ||| C ||| B
+medqa_test_0010,D,1,"D ||| D ||| D ||| A
+Southwestern blot, identifying the presence of DNA-binding proteins ||| B"
+medqa_test_0011,"C
+
+Imatinib.",1,"C
+
+Imatinib ||| C ||| D ||| C
+
+Imatinib ||| C
+
+Imatinib"
+medqa_test_0012,B,1,B ||| B. Meningioma ||| B. Meningioma ||| B ||| B. Meningioma
+medqa_test_0013,D,1,"A
+Explanation: With the patient standing from a supine position, the venous return to the right atrium is increased due to gravity. The increased right atrial pressure may be detected during auscultation, but does not typically cause the murmur to decrease or disappear. ||| C ||| A
+ 
+Explanation: Standing decreases venous return due to gravity, leading to decreased right atrial pressure, which decreases the right ventricular stroke volume and subsequently decreases pulmonary capillary wedge pressure. ||| D ||| A
+Explanation: When standing from a supine position, there is a decrease in venous return to the right heart, which reduces the volume of blood in the right atrium. This leads to a decrease in right atrial pressure, which is opposite to option A."
+medqa_test_0014,D,1,D ||| C ||| C ||| D ||| D
+medqa_test_0015,C,1,B ||| C ||| B ||| D ||| C
+medqa_test_0016,C,1,D ||| C. ||| C ||| C ||| C. IL-13
+medqa_test_0017,D. Matching,1,D ||| D ||| D ||| D
+medqa_test_0018,"B
+
+(For the sake of completeness, a more detailed answer would be needed for the ECG description and the exact diagnosis, but given the options provided, B is the correct answer based on the typical presentation of a pericardial effusion.)",1,"B ||| B ||| A
+ 
+Indomethacin +/- omeprazole ||| D ||| B"
+medqa_test_0019,B,1,B ||| B ||| B ||| B.
+medqa_test_0020,D,1,D ||| A. ||| C ||| D ||| C
+medqa_test_0021,D,1,"C
+
+Lithium exposure in utero ||| B
+
+Deletion of genes on chromosome 7 is associated with DiGeorge syndrome, which can cause congenital heart defects and other symptoms including hypoplastic left heart syndrome and a murmur consistent with pulmonary or left-sided outflow tract obstruction, which is consistent with the presentation of this infant. ||| A
+ 
+22q11 deletion ||| C ||| D"
+medqa_test_0022,"C
+
+ Histoplasma capsulatum infection",1,"C
+
+Histoplasma capsulatum infection ||| C ||| C
+
+ Histoplasma capsulatum infection ||| C
+
+ Histoplasma capsulatum infection ||| C
+
+Histoplasma capsulatum infection"
+medqa_test_0023,D,1,"A
+Streptococcus pneumoniae ||| C
+
+Mycobacterium tuberculosis is less likely given the acute presentation of purulent consolidation and fever in the setting of an acute stroke. The laboratory findings do not specifically support Mycobacterium tuberculosis infection. ||| C
+
+Haemophilus influenzae ||| C
+
+Haemophilus influenzae is a common cause of hospital-acquired pneumonia, particularly in older adults, making it a more likely diagnosis for this patient. ||| C
+
+Haemophilus influenzae is not typically a cause of lung consolidation, this option is more likely."
+medqa_test_0024,B,1,A ||| B ||| B ||| C ||| B
+medqa_test_0025,D,1,D ||| D ||| D ||| D
+medqa_test_0026,D,1,D ||| B ||| D ||| D ||| D
+medqa_test_0027,"A
+ 
+Rifampin significantly induces the CYP3A4 enzyme, which decreases the levels of ethinylestradiol and progesterone in oral contraceptives, leading to decreased efficacy.",1,"A
+ 
+Ethinylestradiol and progesterone components of oral contraceptives are metabolized by CYP3A4 to inactive metabolites. Rifampin is an inducer of CYP3A4, which increases the metabolism and decreased the serum levels of these components. ||| A
+ 
+Rifampin is a strong CYP3A4 inducer that can decrease the levels of ethinylestradiol and progesterone in oral contraceptives. ||| A
+Rifampin induces CYP3A4, leading to decreased levels of ethinylestradiol and progesterone. ||| A
+ 
+Ethinylestradiol and progesterone have variable degrees of cytochrome P450 (CYP) metabolism. However, rifampin primarily induces CYP3A4, while ethambutol is not known for inducing significant CYP enzymes. Pyrazinamide is an isoniazid derivative and is not known to interfere with oral contraceptive absorption, and CYP2A6 is primarily induced by nicotine and certain chemotherapeutic agents. The induction of CYP3A4 by rifampin results in decreased serum levels of ethinylestradiol and progesterone, thereby decreasing the efficacy of the oral contraceptive."
+medqa_test_0028,B,1,D ||| D ||| D ||| B ||| C
+medqa_test_0029,D,1,"A
+
+D ||| D ||| D ||| A
+ 
+C. Reassurance ||| D"
+medqa_test_0030,D,1,D ||| D ||| D ||| D
+medqa_test_0031,C,1,C ||| C ||| C ||| C.
+medqa_test_0032,C.,1,C ||| D ||| C ||| C ||| B
+medqa_test_0033,D,1,D ||| D ||| B ||| D ||| D
+medqa_test_0034,D,1,"A. Insulin, potassium, IV fluids, and glucose ||| B ||| A ||| D ||| C"
+medqa_test_0035,C,1,"C
+
+Rheumatoid arthritis (RA) is a chronic autoimmune disorder that causes joint inflammation and pain. The fact that his knees, back, and hands are involved, along with nail pitting, is characteristic of RA. ||| C
+
+Psoriatic Arthritis is the most likely diagnosis. This condition is associated with psoriasis, and the presence of pitting nail changes is a hallmark of this condition. Arthritis mutilans is a rare, severe form of psoriatic arthritis, but the patient's symptoms do not suggest this level of severity. Rheumatoid arthritis and mixed connective tissue disease have different nail changes (onycholysis and koilonychia, respectively) and are not typically associated with the presence of psoriasis. ||| C
+
+Pitting of the nails is not typically associated with the options A, B, and D. ||| C
+
+Rheumatoid Arthritis (RA) is an autoimmune disease that often presents with symmetric, polyarticular joint inflammation and pitting nail changes. ||| D"
+medqa_test_0036,B,1,B ||| D ||| D ||| D ||| B
+medqa_test_0037,B,1,D ||| B ||| B. ||| C ||| B
+medqa_test_0038,"D
+ 
+47/52 patients had adverse events at 100 mg dose, 23/47 patients had adverse events at 80 mg dose, and 11/51 patients had adverse events at 40 mg dose.",1,"C. 2.5 ||| D. 2.67 ||| C
+
+2.67 ||| C ||| C
+
+2.5"
+medqa_test_0039,"A
+
+ Arcuate fasciculus is the primary structure damaged in Broca's aphasia, which involves difficulty with verbal repetition and non-fluent, effortful speech.",1,"D
+ 
+Arcuate fasciculus is most commonly associated with Conners syndrome. ||| A
+ 
+Arcuate fasciculus damage can lead to Broca's aphasia, which is characterized by non-fluent speech and difficulty with verbal repetition, but the patient's ability to comprehend and speak fluently with most of his speech suggests Broca's aphasia may not be the correct answer. ||| C. Inferior frontal gyrus + superior temporal gyrus ||| A. Arcuate fasciculus ||| C. Inferior frontal gyrus + superior temporal gyrus"
+medqa_test_0040,C,1,C. ||| C ||| C ||| C.
+medqa_test_0041,C,1,C ||| C ||| C ||| C
+medqa_test_0042,C,1,"C ||| B ||| C ||| A
+
+Correct Answer: The quadruple screen with decreased maternal serum AFP is highly suggestive of neural tube defect (NTD) such as spina bifida or anencephaly. ||| B"
+medqa_test_0043,C.,1,"A. Inferior vena cava ||| A. Inferior vena cava ||| C
+
+(Note: This answer is a bit counterintuitive, as the pulmonary artery typically contains higher oxygen levels due to oxygenation from the lungs. However, this question seems to be testing understanding of gas exchange and oxygen content in the pulmonary system, rather than the actual oxygen content of the blood in the pulmonary artery.) ||| C ||| C. Pulmonary artery"
+medqa_test_0044,C,1,C ||| C ||| C ||| C
+medqa_test_0045,D,1,D ||| D ||| A. Ethanol ||| D ||| D
+medqa_test_0046,C. 20,1,C. 20 ||| B. 16 ||| B. 16 ||| B. 19 ||| B. 16
+medqa_test_0047,C,1,D ||| B ||| D ||| D ||| C
+medqa_test_0048,D,1,"D ||| B ||| C
+
+Perfoming karyotyping of amniotic fluid
+
+A. Perform karyotyping of amniotic fluid
+B. Recommend autopsy of the infant
+C. Obtain photographs, x-ray imaging, and MRI
+D. Obtain consent for parental genetic testing ||| B ||| B"
+medqa_test_0049,C,1,D ||| D ||| D ||| D
+medqa_test_0050,D,1,A. ||| C. ||| D ||| A. Induces the formation of thymidine dimers ||| A. Induces the formation of thymidine dimers
+medqa_test_0051,D,1,"A. ||| D ||| A ||| D ||| A
+
+Blood and urine tests can help determine the underlying etiology. However, it appears the lab values point towards aldosterone excess with high sodium and low potassium, alongside elevated blood pressure."
+medqa_test_0052,A. Absent UDP-glucuronosyltransferase activity,1,A. ||| B ||| A. Absent UDP-glucuronosyltransferase activity ||| D ||| D
+medqa_test_0053,B,1,"B ||| C
+
+Atropine is used to treat bradycardia, excessive salivation, excessive bronchial secretions, or to counteract the effects of organophosphate poisoning, but it's not typically used for this scenario. ||| C
+
+Atropine is used to treat bradycardia and excess salivation associated with muscarinic receptor antagonism. ||| B ||| C
+
+Atropine can be used to treat bradycardia, but this isn't the correct side effect, and there are other anticholinergic symptoms that this patient is exhibiting."
+medqa_test_0054,A. Tardive dyskinesia,1,"C ||| A. Tardive dyskinesia ||| A. Tardive dyskinesia ||| A
+Tardive dyskinesia. ||| A. Tardive dyskinesia"
+medqa_test_0055,"A
+
+KOH examination of lesion scrapings",1,"A
+
+KOH examination of lesion scrapings ||| A
+
+KOH examination of lesion scrapings ||| D ||| D ||| D"
+medqa_test_0056,C,1,C ||| C ||| C. ||| B ||| B. Shortened QT interval
+medqa_test_0057,"C
+
+CD3",1,"C. CD3 ||| C ||| B ||| C
+
+B7 receptor ||| C. CD3"
+medqa_test_0058,C,1,C ||| C ||| C. ||| C
+medqa_test_0059,C,1,B ||| C ||| C ||| C ||| B
+medqa_test_0060,"C
+
+ Salmonella Typhi",1,"C
+
+Schistosoma mansoni does not cause this combination of symptoms in the US or Europe, where the infection is generally self-limited. ||| C
+
+ Salmonella Typhi ||| C
+
+Salmonella Typhi ||| C
+
+Salmonella typhi. ||| C
+
+ Salmonella typhi"
+medqa_test_0061,"A
+Acetaldehyde",1,"A
+
+Acetaldehyde is a toxic metabolite of alcohol that is produced when alcohol is broken down in the body, primarily by the enzyme aldehyde dehydrogenase. ||| A. Acetaldehyde ||| A
+
+Acetaldehyde ||| A. Acetaldehyde"
+medqa_test_0062,B,1,"A
+ 
+Serum iron level. ||| B
+ 
+Blood levels of vitamin B12 are often decreased in patients with macrocytic anemia, particularly at a gestational age when folate levels are highest. ||| C ||| B
+ 
+Serum B12 level. ||| C"
+medqa_test_0063,C,1,"A
+
+C. Digital rectal exam ||| C ||| C ||| C ||| A
+
+The patient's failure to urinate since the surgery, combined with abdominal and pelvic discomfort, and the inconclusive bladder scan, suggests urinary retention. Inserting a straight cath (A) is the most appropriate next step to relieve the retention, as it allows for immediate assessment of the urine output and helps to prevent urinary tract complications."
+medqa_test_0064,"A
+ 
+(Answer: A. Disruption of cell membrane permeability)",1,"D ||| C
+
+(Inhibition of 14-alpha-demethylase) ||| C ||| C
+ 
+Inhibition of 14-alpha-demethylase ||| C
+
+Inhibition of 14-alpha-demethylase"
+medqa_test_0065,C,1,B ||| B ||| C ||| B ||| A.
+medqa_test_0066,B,1,D ||| D ||| A. ||| A. ||| A.
+medqa_test_0067,B,1,"B
+
+ Transplacental passage of TSH receptor antibodies is the most likely cause of this infant's symptoms. This condition is known as transient neonatal hypothyroidism (TNH). ||| B ||| B
+
+Transplacental passage of TSH receptor antibodies is the most likely cause. ||| B ||| B."
+medqa_test_0068,A. Phentolamine,1,"C
+
+Nifedipine, ||| C
+
+Nifedipine ||| D ||| C
+
+Nifedipine. ||| C"
+medqa_test_0069,A.,1,D ||| A. ||| B ||| C ||| B.
+medqa_test_0070,"C
+
+Metabolic Alkalosis",1,C ||| A ||| A ||| A ||| C
+medqa_test_0071,A. Cardiac contusion,1,A. Cardiac contusion ||| A. Cardiac contusion ||| C ||| B ||| A. Cardiac contusion
+medqa_test_0072,D,1,C ||| C ||| D ||| B. ||| C
+medqa_test_0073,"C
+
+Propranolol is used to treat symptoms of hyperthyroidism such as tremors and tachycardia.",1,"C
+
+Propranolol is a beta-blocker that can help alleviate symptoms of hyperthyroidism, such as tremors and tachycardia, and is often used as a first-line treatment option in the absence of severe symptoms or thyroid malignancy. ||| C
+
+Propranolol, a beta-blocker, is the best single treatment option for this patient as it effectively controls the symptoms of hyperthyroidism such as tremors, tachycardia, and heat intolerance. ||| C
+
+Beta blockers would be an appropriate choice given the symptoms of tachycardia and tremor, and beta blockers are used to treat hyperthyroidism. ||| C
+
+Propranolol is used to manage hyperthyroid symptoms, including tremors, warm skin, and tachycardia, which are consistent with this patient's presentation."
+medqa_test_0074,D,1,D ||| D ||| D ||| C ||| D
+medqa_test_0075,A. 5,1,"A
+
+(Note: This patient's symptoms suggest a diagnosis of DiGeorge syndrome, also known as 22q11.2 deletion syndrome. This is caused by a deletion on chromosome 22, which is not listed in the options provided. However, based on the options given, the closest match is chromosome 5, which is the correct answer.) ||| C
+
+ 21 ||| D
+
+Turner syndrome is caused by an abnormality of chromosome 22, but there is no option for that. However, the most likely cause of the symptoms described in the question is 22q11.2 deletion syndrome. This option is closest to D. ||| D ||| D"
+medqa_test_0076,B,1,B ||| B ||| B ||| B
+medqa_test_0077,C,1,A. Deposition of urate crystals ||| B ||| B ||| B ||| B
+medqa_test_0078,"C
+
+""The heart is made up of four chambers: the left and right atria, and the left and right ventricles. The atria are the upper chambers, and the ventricles are the lower chambers. In a normal heart, oxygenated blood from the lungs enters the left atrium, and then flows into the left ventricle, which pumps it out to the body. Un-oxygenated blood from the body returns to the right atrium and then to the right ventricle, which pumps it out to the lungs.
+
+In a heart with a single ventricle, the left ventricle is a common chamber that pumps blood out to both the body and the lungs. This can occur in several types of congenital heart defects, including hypoplastic left heart syndrome. In this defect, the left ventricle is very small and underdeveloped, and therefore, it is unable to pump enough blood to meet the body's needs.
+
+In the case of a newborn who is extremely cyanotic, has progressive respiratory failure, and has an enlarged ""egg-shaped"" heart, the most likely diagnosis is hypoplastic left heart syndrome. This condition occurs when the left ventricle is severely underdeveloped, and the pulmonary valve is not formed properly. As a result, the left ventricle is unable to pump blood to the lungs, and the blood is unable to get oxygen. This leads to cyanosis and respiratory distress.
+
+A) Coarctation of the aorta occurs when there is a narrowing of the aorta, which can lead to high blood pressure and symptoms such as headache, dizziness, and chest pain. It is not typically associated with an enlarged ""egg-shaped"" heart or cyanosis immediately after birth.
+
+B) Persistent truncus arteriosus is a congenital heart defect that occurs when the great vessels do not separate properly during fetal development. This results in a single blood vessel that comes out of the heart, which then divides into two separate vessels. This condition is typically associated with severe cyanosis and respiratory failure, but it is not typically described as having an ""egg-shaped"" heart.
+
+C) Transposition of the great vessels is a congenital heart defect that occurs when the two main arteries that carry blood away from the heart are reversed. This results in the aorta arising from the right ventricle and the pulmonary artery arising from the left ventricle. This condition is typically associated with severe cyanosis and respiratory failure immediately after birth.
+
+D) Tricuspid atresia is a congenital heart defect that occurs when the tricuspid valve is missing or abnormally developed. This results in the right ventricle being unable to pump blood to the lungs. While this condition can cause cyanosis and respiratory distress, it is not typically associated with an enlarged ""egg-shaped"" heart.
+
+The most likely cause of this newborn's condition is hypoplastic left heart syndrome, which is characterized by the underdevelopment of the left ventricle and the enlargement of the heart, which can be described as ""egg-shaped"". The procedure mentioned, atrial septostomy, is a common intervention for this condition, pending definitive surgical correction.",1,"C
+
+""The heart is an egg-shaped organ that lies between the lungs and the abdomen."" ||| C
+
+ Transposition of great vessels ||| C
+
+Atrial septostomy is typically used in the case of Transposition of the Great Arteries, allowing mixing of blood through an atrial septal defect to alleviate cyanosis and allow for temporary stabilization of the patient. ||| C
+
+Transposition of Great Vessels ||| C
+
+(Transposition of great vessels)"
+medqa_test_0079,D,1,D ||| C ||| C ||| C. ||| C.
+medqa_test_0080,C,1,C ||| B ||| B ||| C ||| D
+medqa_test_0081,D,1,"B ||| C
+
+Cyclin-dependent kinase 4 ||| C
+
+Cyclin-dependent kinase 4 ||| B ||| D"
+medqa_test_0082,B,1,"D ||| C
+
+Melanomas are often more common in individuals with darker skin tones, so this African American woman is at increased risk for certain subtypes. ||| C ||| C
+
+ Acral lentiginous is the correct answer for this patient. ||| D"
+medqa_test_0083,"A
+ 
+C",1,C ||| C ||| B ||| C ||| D
+medqa_test_0084,C,1,C ||| A. ||| D ||| A. ||| B
+medqa_test_0085,D,1,"D ||| C
+
+Papillary muscle rupture is most helpful in establishing a diagnosis of Libman-Sacks endocarditis. ||| D ||| B ||| A
+ 
+B."
+medqa_test_0086,C,1,"C
+
+D ||| C ||| D ||| C ||| C"
+medqa_test_0087,D,1,D ||| D ||| D ||| D
+medqa_test_0088,C,1,D ||| B ||| B ||| D ||| D
+medqa_test_0089,B,1,B ||| B ||| B ||| B.
+medqa_test_0090,D,1,D ||| D ||| D ||| D
+medqa_test_0091,B,1,B ||| B ||| B ||| B
+medqa_test_0092,C,1,C ||| C ||| C ||| C
+medqa_test_0093,C,1,C ||| C ||| C ||| C
+medqa_test_0094,D,1,"D ||| C ||| A
+
+Muffled heart sounds and jugular venous distention in the setting of trauma suggest a tension pneumothorax. ||| D ||| C"
+medqa_test_0095,C,1,"A
+ 
+Lysosomal storage diseases (e.g. cystinosis) often present with renal impairment, palpable flanks, and can be inherited in an X-linked pattern, consistent with the patient's family history. ||| C
+
+Liver function tests ||| A
+ 
+ (Answer: Autosomal Dominant Polycystic Kidney Disease - ADPKD, is associated with renal cysts and renal failure, often presents with palpable flank masses, and is an autosomal dominant inheritance pattern.) ||| A
+ 
+(Low-dose computed tomography for abdominal aortic aneurysm screening is recommended for men aged 50-74 with risk factors, such as a family history of abdominal aortic aneurysm or end-stage renal disease, as is seen in this patient.) ||| C"
+medqa_test_0096,D,1,"D ||| D ||| D
+
+ Alpha-1 antitrypsin deficiency. ||| C ||| C"
+medqa_test_0097,B,1,B ||| B ||| B ||| B
+medqa_test_0098,B,1,"B ||| B ||| B ||| A. ||| A
+
+C"
+medqa_test_0099,D,1,D ||| B ||| B ||| B ||| B
+medqa_test_0100,B,1,B ||| B ||| B ||| B
+medqa_test_0101,"C
+
+Levodopa.",1,A. Amantadine ||| A. Amantadine ||| A. Amantadine ||| A. Amantadine
+medqa_test_0102,C,1,A. Stop magnesium sulfate and give calcium gluconate ||| B ||| B ||| C ||| A.
+medqa_test_0103,A. Myxedema coma,1,"A. ||| A
+ 
+ Myxedema coma ||| A
+ 
+ Myxedema coma ||| A
+
+Myxedema Coma ||| A. Myxedema coma."
+medqa_test_0104,"B
+
+Aortic regurgitation.",1,A. Mitral regurgitation ||| A. ||| A. Mitral regurgitation ||| A. ||| D
+medqa_test_0105,B,1,B ||| B ||| B. ||| B
+medqa_test_0106,B,1,"A
+ 
+ CT chest without contrast in 12 months ||| D ||| A
+ 
+D ||| D ||| D"
+medqa_test_0107,C,1,"B ||| B ||| C ||| B
+
+Primary spermatocyte ||| B"
+medqa_test_0108,B,1,D ||| D ||| B ||| B. ||| B
+medqa_test_0109,A. Increased serum VIP,1,"A
+ 
+Note: A - Increased serum Vasoactive Intestinal Peptide (VIP) is often associated with VIPoma, a pancreatic endocrine tumor that causes watery diarrhea and abdominal cramps, but the patient's symptoms and lab results don't support this diagnosis. ||| C ||| A
+ 
+- Increased serum VIP
+- Melanosis coli ||| B ||| C"
+medqa_test_0110,C,1,C ||| C ||| C ||| C
+medqa_test_0111,B,1,"D ||| A
+ 
+R ||| B ||| D ||| A
+
+(Imaging of the frontal X-ray of the upper chest airways is not provided; however, based on the description, this question is related to foreign body aspiration.)"
+medqa_test_0112,B,1,"C
+
+Explanation of Answer: The patient's symptoms of retrosternal burning associated with eating, along with the worsening symptoms, suggest GERD, where decreased lower esophageal tone leads to frequent reflux of gastric contents. ||| B ||| A. Decreased lower esophageal tone ||| C
+
+Decreased lower esophageal tone ||| D"
+medqa_test_0113,C,1,C ||| C ||| C ||| C
+medqa_test_0114,C. Metformin,1,"A
+ 
+Metformin lactic acidosis is suggested by decreased HCO3- and pH, and increased pCO2. ||| B ||| B ||| B. Diarrhea. ||| B"
+medqa_test_0115,D,1,D ||| D ||| D ||| B ||| D
+medqa_test_0116,B,1,"B ||| B ||| B
+
+NF2 gene on chromosome 22 ||| B ||| B"
+medqa_test_0117,"C
+
+(Metformin-induced lactic acidosis due to impaired renal excretion of the medication)",1,"C
+
+Metformin ||| C. ||| C
+
+Metformin toxicity ||| C
+
+Metformin ||| C
+
+(Metformin-induced lactic acidosis)"
+medqa_test_0118,D,1,D ||| D ||| D ||| D
+medqa_test_0119,C. Avoid exposure to birds,1,"C. ||| C ||| C
+
+Avoid exposure to birds ||| C ||| C."
+medqa_test_0120,D,1,D ||| C ||| C ||| D ||| B
+medqa_test_0121,A. Epstein-Barr virus,1,"A. Epstein-Barr virus ||| A. Epstein-Barr virus ||| A. ||| A
+Epstein-Barr virus (EBV) is associated with various malignancies, including Hodgkin lymphoma. ||| A."
+medqa_test_0122,D,1,D ||| D ||| D ||| D
+medqa_test_0123,"C
+
+Thrombin time and activated partial thromboplastin time (aPTT) suggest a coagulopathy. Given the patient's presentation of thrombocytopenia, prolonged aPTT, and normal platelet count, the next best step is to perform a mixing study to determine the presence of a coagulation abnormality (e.g., dilutional coagulopathy) or a consumptive coagulopathy (e.g., disseminated intravascular coagulation (DIC)).",1,"A
+
+Picsy diagnosis suggests DIC ||| B ||| A
+
+(Answer: A Mixing study) ||| A
+
+Platelet disorders should be suspected with the low fibrinogen and prolonged activated partial thromboplastin time. ||| A
+
+ Platelet count 230,000/mm3  is high, suggesting a platelet disorder or activation, which may be related to thrombotic thrombocytopenic purpura (TTP). The high ACT and TT times, along with a non-contrast CT of the head indicating a subarachnoid hemorrhage, may also suggest a coagulopathy related to TTP."
+medqa_test_0124,B,1,D ||| C ||| D ||| C ||| C
+medqa_test_0125,C. Repeat PPD in 1 week,1,B ||| B ||| B ||| B
+medqa_test_0126,"A
+ 
+ Uncal herniation.",1,"A
+Uncus herniation, ||| A. Herniation of the uncus ||| A
+
+(Additional information needed to determine exact answer, this choice is provided based on commonality and the information given in the question) ||| A
+
+(No additional text) ||| A. Herniation of the uncus"
+medqa_test_0127,C,1,C ||| C ||| C ||| C
+medqa_test_0128,D,1,B ||| D ||| D ||| D ||| D
+medqa_test_0129,"A
+
+(Decreased acetylcholine release is the pathogenesis of botulism, which can cause symptoms such as blurred vision, double vision, and fixed pupillary dilation due to the toxin's effect on acetylcholine release.)",1,"A
+
+(Decreased acetylcholine release is associated with organophosphate poisoning, which would be consistent with symptoms of double vision and pupillary dilation after eating foods potentially contaminated with a plant neurotoxin, such as botulinum toxin, present in foods like pickles.) ||| B ||| A
+ 
+D. Inhibition of GABA release ||| B ||| B"
+medqa_test_0130,D,1,"A
+ 
+D ||| D ||| A. Galactosemia ||| D ||| A. Galactosemia"
+medqa_test_0131,B,1,B ||| D ||| B ||| B ||| B
+medqa_test_0132,A.,1,"A. Diverticulitis ||| A. Diverticulitis ||| C. ||| A
+ 
+Diverticulitis ||| A. Diverticulitis"
+medqa_test_0133,B. Aortoiliac atherosclerosis,1,"B
+
+Aortoiliac atherosclerosis. ||| B
+
+Aortoiliac atherosclerosis is the most specific etiology for this patient's symptoms, including erectile dysfunction, buttock and hip pain, and weak lower extremity and femoral pulses, given his smoking history, diabetes, coronary artery disease, and hypertension. ||| B
+
+Aortoiliac atherosclerosis. ||| B
+
+Aortoiliac atherosclerosis is the most specific etiology of this patient's symptoms, considering his age, smoking history, and symptoms of erectile dysfunction and buttock and hip pain that are relieved by rest."
+medqa_test_0134,"A. Increased PTH, decreased calcium, increased phosphate, decreased calcitriol",1,"C. Decreased PTH, decreased calcium, increased phosphate, decreased calcitriol ||| C
+
+Decreased PTH, decreased calcium, increased phosphate, decreased calcitriol ||| A. Increased PTH, decreased calcium, increased phosphate, decreased calcitriol ||| A. Increased PTH, decreased calcium, increased phosphate, decreased calcitriol"
+medqa_test_0135,C,1,C ||| C ||| C ||| C
+medqa_test_0136,"C
+
+Gastroesophageal reflux disease (GERD)",1,"C ||| C ||| C. ||| C
+
+Gastroesophageal reflux disease (GERD) is often associated with symptoms worsening with large meals and spicy foods and improving with antacids. ||| C"
+medqa_test_0137,C,1,C ||| B. ||| D ||| C ||| D
+medqa_test_0138,B,1,B ||| B ||| B ||| B
+medqa_test_0139,C,1,C ||| C ||| C ||| D ||| C
+medqa_test_0140,C,1,C ||| C ||| C ||| C
+medqa_test_0141,"D
+
+Suppression with low dose dexamethasone does not work, so the next best step is to do an inferior petrosal sinus sampling to determine which input drives cortisol production.",1,"D
+
+24-hour urinary cortisol: 470 µg (< 300 µg)
+Serum cortisol 30 µg/mL (5-23 µg/dL) ||| D
+
+24-hour urinary cortisol: 470 µg (< 300 µg)
+Serum cortisol 30 µg/mL (5-23 µg/dL)
+Serum adrenocorticotropin-releasing hormone (ACTH) 2 pg/mL (> 5 pg/mL) ||| D
+
+Low dose dexamethasone suppression test ||| D
+
+High dose dexamethasone suppression trial failed to show suppression, which confirms the diagnosis of Cushing's syndrome. 
+
+Note: Although you mentioned that the answer is not D, but the correct answer according to the format is provided, the correct next step would be to conduct an inferior petrosal sinus sampling (D). ||| D"
+medqa_test_0142,B,1,"A
+Inhibition of beta-tubulin polymerization ||| D ||| D ||| A
+Vincristine is a vinca alkaloid that inhibits microtubule polymerization, which is essential for axonal transport and the maintenance of peripheral axons. ||| B"
+medqa_test_0143,B,1,B ||| B ||| B ||| B
+medqa_test_0144,B,1,"A. ||| C ||| B ||| C
+
+Reassurance and follow-up ||| C"
+medqa_test_0145,C,1,"C ||| B ||| A
+Mesangial proliferative glomerulonephritis, also known as post-streptococcal glomerulonephritis (PSGN), is a complication of streptococcal pharyngitis, which the boy had two weeks ago. The elevated creatinine or serum protein level is not mentioned, but PSGN typically presents with massive proteinuria and hematuria after a streptococcal infection. ||| B ||| C"
+medqa_test_0146,D,1,D ||| D ||| D ||| C ||| C
+medqa_test_0147,D,1,D ||| D ||| D ||| C ||| C
+medqa_test_0148,B,1,B ||| B ||| B ||| B
+medqa_test_0149,C,1,"C. Immunoglobulin- IgA ||| C ||| C. ||| C ||| D
+
+IgM is the primary defense in response to the bacteria and toxins produced by Staphylococcus aureus."
+medqa_test_0150,A. Levofloxacin,1,B. ||| A. Levofloxacin ||| A. Levofloxacin ||| B. ||| A. Levofloxacin
+medqa_test_0151,A.,1,A. ||| D ||| B ||| B ||| B. Corpus luteum cysts
+medqa_test_0152,D,1,"D ||| A
+ 
+The virus is most likely coronavirus, such as SARS-CoV-2, with a segmented genome and helical capsid. ||| D ||| C
+
+Downregulation of ICAM-1 expression ||| C
+
+Serum antibodies against hemagglutinin can protect against infection."
+medqa_test_0153,B,1,"A. Previous suicide attempt ||| A. Previous suicide attempt ||| C ||| A. Previous suicide attempt ||| A
+Previous suicide attempt"
+medqa_test_0154,C,1,C ||| C ||| C ||| C
+medqa_test_0155,D,1,C ||| B ||| D ||| C ||| B
+medqa_test_0156,D,1,"B
+
+Benztropine, an anticholinergic agent, is often used to treat acute dystonic reactions, which are common side effects of antipsychotic medications. ||| B
+
+Benztropine, an anticholinergic agent, is often used to manage muscle spasms, extrapyramidal symptoms, and agitation in patients with schizophrenia, which is consistent with the patient's presentation of neck stiffness and muscle spasms. ||| B ||| B ||| B
+
+Benztropine is used to treat acute dystonic reactions, which are associated with antipsychotic medications. The patient's symptoms of neck stiffness, locked neck, and firm and contracted sternocleidomastoid and trapezius muscles suggest a dystonic reaction."
+medqa_test_0157,C,1,"C ||| C ||| C ||| A
+ 
+ Apolipoprotein C-II is involved in the regulation of lipoprotein lipase, a key enzyme in lipid metabolism. The most well-known complication associated with a deficiency in apolipoprotein C-II is pancreatitis. ||| A
+ 
+APOC2 is a protein involved in the metabolism of triglycerides, and mutations in this gene can cause hypobetalipoproteinemia, also known as abetalipoproteinemia. One of the complications of this disease is the accumulation of lipids in the cornea, leading to corneal arctycia, not arci."
+medqa_test_0158,C,1,C ||| C ||| C ||| C
+medqa_test_0159,D,1,B ||| D ||| D ||| D ||| D
+medqa_test_0160,B,1,"D ||| C. ||| C ||| D
+
+The correct zone is the capsular polysaccharide capsule, but it was removed. As a result I would select that the capsule for 1, 2, and 3 is the correct answer. The zone for the capsular polysaccharide of Neisseria meningitidis (Somatic O Antigen) is 1. The capsule for Haemophilus influenzae type b is also 1, as the Hib vaccine provides protection against this encapsulated strain. The capsule for Streptococcus pneumoniae is the pneumococcal polysaccharide capsule, which is located in zone 3 (the polysaccharide capsule of pneumococci is located in the third zone). ||| C"
+medqa_test_0161,C. Invasive ductal carcinoma of the breast,1,C. ||| B ||| B. Non-Hodgkin lymphoma ||| C ||| B
+medqa_test_0162,"C
+
+ Linear IgG staining on immunofluorescence",1,"C
+
+Linear IgG staining on immunofluorescence ||| C ||| C
+
+Linear IgG staining on immunofluorescence. ||| D ||| C
+
+ Linear IgG staining on immunofluorescence"
+medqa_test_0163,C,1,B ||| C ||| B ||| B ||| C
+medqa_test_0164,B,1,B ||| B ||| B ||| B
+medqa_test_0165,D,1,C. ||| C. ||| C ||| B ||| C.
+medqa_test_0166,B,1,"A
+ 
+B ||| B ||| B ||| B"
+medqa_test_0167,C,1,C ||| C. ||| C ||| C
+medqa_test_0168,B,1,C ||| D ||| D ||| B ||| B
+medqa_test_0169,C,1,C ||| C ||| C ||| C
+medqa_test_0170,D,1,"B ||| C
+
+Miosis (pupil constriction) would typically indicate opioid intoxication, which would be a likely cause for altered mental status in this scenario. ||| A. Ataxia ||| B. Conjunctival injection ||| C
+
+Conjunctival injection is a sign of increased intracranial pressure (ICP). The patient's altered mental status and being found down in the street suggest a head injury."
+medqa_test_0171,D,1,"D ||| C ||| D ||| A
+Cleft palate ||| C"
+medqa_test_0172,"C
+
+Olanzapine",1,"C
+
+Olanzapine ||| B ||| B ||| C ||| B"
+medqa_test_0173,D,1,D. Increase in serum cortisol ||| B ||| A. ||| D ||| B
+medqa_test_0174,D,1,D ||| D ||| D ||| D
+medqa_test_0175,D,1,"A
+ 
+ CT scan of the chest ||| D ||| D ||| D ||| D"
+medqa_test_0176,C. 590 / (590 + 10),1,"D
+590 / (590 + 20) ||| D. 580 / (580 + 20) ||| C
+590 / (590 + 10) ||| B
+580 / (10 + 580) ||| B. 580 / (10 + 580)"
+medqa_test_0177,C,1,C ||| C ||| C ||| C
+medqa_test_0178,B,1,C. ||| B. ||| C. Contralateral corticospinal tract involvement ||| C. ||| C.
+medqa_test_0179,C,1,"A
+
+(Diphtheria toxin is a key virulence factor for Corynebacterium diphtheriae.) ||| C ||| C ||| C ||| A
+ 
+Chlamydia trachomatis infection is the most likely cause of this patient's symptoms, as he is sexually active with a single partner and has symptoms of urethritis (burning sensation on urination and increased urinary frequency). The Gram stain of the urethral swab showing polymorphonuclear leukocytes but no organisms is consistent with a Chlamydia trachomatis infection, which often presents with lymphocytic urethritis rather than polymorphonuclear leukocytosis. The presence of increased blood flow to the affected testicle on ultrasound also supports the diagnosis of epididymitis, which is a common complication of Chlamydia trachomatis infection."
+medqa_test_0180,C,1,"C ||| C
+
+Large platelets and normal ristocetin response point towards Bernard-Soulier disease. ||| C
+
+Large platelets are characteristic of Bernard-Soulier disease. ||| C ||| C"
+medqa_test_0181,B,1,"C ||| A. ||| A
+ Adenovirus ||| C ||| A
+
+Adenoviruses are typically associated with this type of presentation"
+medqa_test_0182,B,1,"C ||| A
+
+B ||| C ||| B ||| B"
+medqa_test_0183,C,1,C ||| C ||| C. ||| C
+medqa_test_0184,D,1,D ||| D ||| D ||| D
+medqa_test_0185,D,1,D ||| D ||| C ||| D ||| D
+medqa_test_0186,A. The ribosome will recognize the mischarged tRNA and prevent its incorporation by removing the valine,1,A. The ribosome will recognize the mischarged tRNA and prevent its incorporation by removing the valine ||| B ||| A. The ribosome will recognize the mischarged tRNA and prevent its incorporation by removing the valine ||| B ||| D
+medqa_test_0187,B,1,B ||| B ||| B ||| B
+medqa_test_0188,C,1,B ||| C ||| B ||| C ||| B
+medqa_test_0189,C,1,C. ||| A. Malar rash ||| B ||| A. Malar rash ||| C
+medqa_test_0190,"C
+
+Propranolol is the best answer, as it is a beta-blocker commonly used to manage the physical symptoms of panic attacks and anxiety disorders, such as palpitations, tremors, and shortness of breath.",1,"C
+
+Propranolol is often used to treat the physical symptoms of panic attacks, such as tachycardia and tremors, but its efficacy in managing anxiety symptoms is limited. The correct answer would be a medication specifically used to treat anxiety and panic disorder, such as selective serotonin reuptake inhibitors (SSRIs). ||| C
+
+Propranolol is the correct answer due to its use in treating panic disorder. ||| C
+
+Propranolol is a beta-blocker, which is often used to manage symptoms of anxiety disorders, including panic disorder. ||| C
+
+Propranolol is the best choice for managing panic disorder and its symptoms, which include chest discomfort, shortness of breath, trembling, sweating, and anxiety."
+medqa_test_0191,B,1,D ||| D ||| D ||| D
+medqa_test_0192,D,1,D. ||| D ||| D ||| D.
+medqa_test_0193,C,1,C ||| C. ||| C ||| C
+medqa_test_0194,C,1,"C
+
+Conversion of aminolevulinic acid to porphobilinogen is impaired in this patient, as it suggests an acute intermittent porphyria diagnosis. ||| D ||| D ||| C ||| C"
+medqa_test_0195,C.,1,C. ||| C ||| C. ||| C.
+medqa_test_0196,C,1,D ||| D ||| C ||| D ||| A. Warfarin
+medqa_test_0197,B,1,B ||| B ||| B ||| B
+medqa_test_0198,C,1,C ||| C ||| C ||| C
+medqa_test_0199,B,1,"B ||| B ||| C
+
+Cortical thinning with tubular atrophy ||| C ||| D"
+medqa_test_0200,B,1,D ||| C ||| B ||| D ||| C
+medqa_test_0201,D,1,B ||| B. ||| B. ||| B.
+medqa_test_0202,B,1,B ||| B ||| B ||| B
+medqa_test_0203,B,1,"D ||| B
+ 
+ Ivermectin ||| B ||| A. Benznidazole ||| D"
+medqa_test_0204,B,1,C ||| C. ||| B ||| B ||| C
+medqa_test_0205,"C
+
+(I) H. influenzae (correct)
+(II) Tetanus (correct)
+(IV) S. pneumoniae (correct)
+(V) Hepatitis B (incorrect)",1,B ||| B ||| B ||| B
+medqa_test_0206,"C
+
+A LOD score of >3 indicates that the two loci are likely to be closely linked.",1,"C. LOD Score > 3 ||| C
+
+LOD Score > 3 suggests a high probability of the loci being closely linked. ||| C
+
+Lod score > 3 suggests that two genetic loci are likely to be linked. ||| C
+
+The likelihood of two genetic loci being closely linked is associated with a high logarithm of odds (LOD) score. ||| C"
+medqa_test_0207,C,1,"C ||| C ||| C
+
+Loop electrosurgical excision (LEEP) is a preferred method for treating CIN I due to its ability to obtain tissue samples for histopathological examination, providing a definitive diagnosis, and offering a high chance of complete removal of the lesion. ||| C ||| A
+ 
+ Loop electrosurgical excision (LEEP) is often recommended for CIN I to ensure complete removal of the abnormal tissue and reduce the risk of recurrence."
+medqa_test_0208,"C
+
+Inhibits viral entry",1,"B ||| A
+
+Prevents viral transcription ||| A
+ 
+ Prevents viral transcription ||| C ||| C
+
+Inhibits viral entry"
+medqa_test_0209,C,1,"A
+Squamous cell carcinoma. ||| A. Squamous cell carcinoma ||| C ||| C
+
+Actinic keratosis is often seen in sun-exposed areas of the skin and mucous membranes, such as the lips. A history of years of smoking and working as a fruit picker increases the risk for actinic keratosis. The lesions typically have a wart-like appearance, but the appearance can vary. A, Squamous cell carcinoma, would have a different presentation. B, Aphthous stomatitis, is a type of canker sore and is not as commonly seen in sun-exposed areas. D, Traumatic ulcer, would likely be painful and not have the characteristic appearance of actinic keratosis. ||| C
+
+Actinic keratosis is often found on sun-exposed areas, and the patient's long history of smoking and working as a fruit picker puts him at higher risk for this condition."
+medqa_test_0210,"A
+ 
+ G1 phase arrest.",1,"A
+
+G1 phase arrest ||| A
+ 
+ G1 phase arrest ||| C ||| A
+ 
+G1 phase arrest ||| C
+
+Explanation: Activation of cyclin-dependent kinase 4 (Cdk4) promotes cell cycle progression, particularly from the G1 phase into the S phase."
+medqa_test_0211,D,1,D ||| D ||| D ||| D
+medqa_test_0212,"B. The study included only 14 patients, which is a small sample size.",1,"D ||| B ||| C ||| A
+The study had a low number of patients. ||| A. No prevalence assessment"
+medqa_test_0213,A. Acalculous cholecystitis,1,"D ||| A. Acalculous cholecystitis ||| B. Calculous cholecystitis ||| A. Acalculous cholecystitis ||| A
+Acalculous cholecystitis."
+medqa_test_0214,B,1,"B ||| B
+
+Factitious disorder ||| B
+
+Factitious disorder ||| B ||| B
+
+Factitious disorder imitative type, due to a response to stress and emotional turmoil."
+medqa_test_0215,A. Urinalysis and serum creatinine,1,"A. Urinalysis and serum creatinine ||| A. Urinalysis and serum creatinine ||| C ||| A. Urinalysis and serum creatinine ||| A
+
+ Urinalysis and serum creatinine is the best next step in the management of this patient, as it would provide an initial evaluation of his urinary symptoms, while a digital rectal examination would be more appropriate after ruling out obstruction based on urinalysis and serum creatinine, and serum creatinine may not be available before this."
+medqa_test_0216,D,1,B ||| B ||| C ||| B ||| B
+medqa_test_0217,C,1,C ||| C ||| B ||| C. ||| B
+medqa_test_0218,D,1,D ||| D ||| D ||| D
+medqa_test_0219,B,1,"B. Inefficient breakdown of leucine, isoleucine, and valine ||| C ||| B. Inefficient breakdown of leucine, isoleucine, and valine. ||| C. Dysfunction in the motility of respiratory cilia ||| B. Inefficient breakdown of leucine, isoleucine, and valine"
+medqa_test_0220,B,1,"B ||| C
+
+ Decreased FEV1 and FVC with normal FEV1/FVC ratio ||| B ||| C
+
+Decreased FEV1 and FVC with normal FEV1/FVC ratio ||| A
+Decreased FEV1 and FVC with normal FEV1/FVC ratio is indicative of obstructive lung disease, which can be caused by asthma, COPD, or other conditions that lead to airway constriction."
+medqa_test_0221,A. Administer zidovudine,1,C ||| D ||| D ||| D ||| A. Administer zidovudine
+medqa_test_0222,C,1,"A. Binding to the alpha subunit of the insulin receptor ||| C ||| A
+ Binding to the alpha subunit of the insulin receptor ||| C ||| A. Binding to the alpha subunit of the insulin receptor"
+medqa_test_0223,A.,1,"A
+ 
+A. Endometrial sloughing and uterine contractions mediated by prostaglandin ||| B ||| A. Endometrial sloughing and uterine contractions mediated by prostaglandin ||| A
+
+Endometrial sloughing and uterine contractions mediated by prostaglandin. ||| A
+ 
+ Endometriosis"
+medqa_test_0224,C,1,"C ||| A
+ 
+(Cytomegalovirus, the causative agent, typically spreads to the CNS via reactivation from latent infection in dorsal root ganglia.) ||| C ||| B ||| A. Hematogenous dissemination to the meninges"
+medqa_test_0225,C,1,"C
+
+Vitiligo. ||| C ||| C ||| C ||| C"
+medqa_test_0226,C,1,B ||| B ||| B ||| B
+medqa_test_0227,C,1,"C
+
+Amphotericin B can cause hypokalemic metabolic acidosis due to its effect on renal potassium excretion. ||| C
+
+Amphotericin B can cause nephrogenic diabetes insipidus by impairing renal tubular function, leading to a decrease in ADH response and thus, a failure of the kidneys to concentrate urine, explaining the decreased urination. ||| C
+
+Amphotericin B is an antifungal medication that can cause renal impairment, electrolyte imbalances, and hyponatremia (low sodium levels), all of which match the patient's lab findings. ||| C
+
+Amphotericin B can cause hypokalemia, hypomagnesemia, and can also cause hypokalemic alkalosis (decreased pH in the setting of low serum bicarbonate levels) due to the kidneys' inability to reabsorb potassium, leading to its loss in the urine."
+medqa_test_0228,B.,1,B ||| B ||| B ||| B
+medqa_test_0229,"C
+
+Bromocriptine",1,"B
+
+Levothyroxine 50mcg, daily ||| D ||| D ||| B
+
+Corrected TSH 4.8 µU/mL ||| D"
+medqa_test_0230,"B
+
+Coarctation of the aorta.",1,"B
+
+ Coarctation of the aorta ||| B ||| B ||| B ||| B
+
+Coarctation of the aorta"
+medqa_test_0231,C,1,"C. Staphylococcus aureus ||| C
+
+Staphylococcus aureus is the most common causative organism in prosthetic joint infections. ||| C ||| C
+
+Staphylococcus aureus ||| C"
+medqa_test_0232,C,1,C ||| C ||| A. ||| C ||| C
+medqa_test_0233,D,1,"A ||| C ||| A
+
+(This is a description of leprosy, a disease caused by Mycobacterium leprae, which is acid-fast, thus matching option A) ||| D ||| A
+ 
+Note: Acid-fast bacteria can include those responsible for cutaneous leishmaniasis, such as Leishmania donovani."
+medqa_test_0234,C,1,"B ||| B ||| D ||| D ||| C
+
+P"
+medqa_test_0235,B. Previous hepatitis A infection,1,B. Previous hepatitis A infection ||| B. Previous hepatitis A infection. ||| B ||| B ||| B
+medqa_test_0236,A. Nucleotide excision repair,1,"A. ||| B
+
+Non-homologous end joining is the most likely correct answer. 
+
+Here's why:
+The patient's symptoms suggest xeroderma pigmentosum, a rare genetic disorder characterized by an inability to repair DNA damage caused by ultraviolet (UV) light. Xeroderma pigmentosum is associated with impaired non-homologous end joining, which is a process by which cells repair double-strand DNA breaks in the absence of homologous recombination. ||| A. Nucleotide excision repair ||| A. Nucleotide excision repair ||| A
+
+Nucleotide excision repair"
+medqa_test_0237,"A
+ 
+A) Diffuse infiltrate of lymphoid cells destroying thyroid follicles",1,C ||| B ||| D ||| C ||| C.
+medqa_test_0238,B,1,"B ||| C ||| B ||| A
+ 
+Let me know if you'd like me to help with anything else. ||| C"
+medqa_test_0239,C,1,"D ||| A
+ 
+Blood tests, such as ANA and ESR, are often elevated in this condition. ||| D ||| D ||| A."
+medqa_test_0240,D,1,D ||| D ||| D ||| D
+medqa_test_0241,C,1,D ||| D ||| B ||| C ||| B
+medqa_test_0242,"A
+
+(The answer is related to the patient's short stature and low hairline and broad chest, which are suggestive of Turner syndrome.)",1,D ||| C ||| C ||| D ||| C.
+medqa_test_0243,C,1,D ||| D ||| C ||| A. ||| C
+medqa_test_0244,B.,1,"B
+
+(Hair cells of the pinna are rich in type II collagen and chondroitin sulfate) ||| B ||| B. ||| B ||| B
+
+ Pinna"
+medqa_test_0245,C,1,C ||| C ||| C ||| C
+medqa_test_0246,C,1,"C. Repeat blood cultures 48 hours after initial cultures were drawn. ||| C. ||| B. ||| C
+
+This question tests the student's knowledge of the optimal timing for repeating blood cultures in a case of endocarditis, which is a crucial concept in the diagnosis and management of infective endocarditis. ||| B"
+medqa_test_0247,D,1,D ||| D ||| D ||| B ||| B
+medqa_test_0248,B,1,B ||| B ||| B ||| C ||| B
+medqa_test_0249,C.,1,C ||| C ||| D ||| C ||| C

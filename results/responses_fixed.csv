@@ -1,0 +1,839 @@
+qid,evaluation_response,evaluation_starts_with_letter,consistency_responses
+medqa_test_0000,"A
+
+The resident should disclose the error to the patient and report it accurately in the operative report, as it is a significant complication that could impact the patient's care and outcomes.",1,"A
+
+Disclose the error to the patient and put it in the operative report ||| A
+
+The attending's request that the resident withhold the information from the operative report is not in compliance with standards of patient care. ||| D ||| A
+
+The patient's rights and safety should be the top priority. Disclosing the error and including it in the operative report is the correct course of action, as it promotes transparency and accountability. ||| A
+
+""The surgeon is to report all significant complications or errors occurring during a surgical procedure in the operative note."""
+medqa_test_0001,"A
+Platinum-based chemotherapy agents.",1,"A
+ 
+In this case, platinum-based chemotherapy agents such as cisplatin are commonly used for bladder cancer treatment. A notable side effect of platinum-based chemotherapy is ototoxicity, which is associated with damage to the inner ear. This damage is likely due to the generation of free radicals (free oxygen radicals) by platinum complexes, leading to oxidative stress and damage to auditory hair cells. ||| B ||| C ||| D ||| C"
+medqa_test_0002,B,1,B ||| B ||| B ||| B. ||| B
+medqa_test_0003,B,1,B ||| B ||| B ||| B ||| B
+medqa_test_0004,B,1,B ||| B ||| B ||| B ||| B
+medqa_test_0005,B,1,"B
+
+Labetalol ||| B ||| D ||| A. Diltiazem ||| B"
+medqa_test_0006,"A
+
+Renal artery stenosis",1,"C ||| B ||| B ||| C ||| A
+
+Dilation of the right ureter and renal pelvis suggests ureteral obstruction, which is consistent with renal artery stenosis, a common cause in hypertensive patients."
+medqa_test_0007,C,1,C ||| B ||| B ||| C ||| B
+medqa_test_0008,A.,1,A. A history of stroke or venous thromboembolism ||| D ||| D ||| C ||| C
+medqa_test_0009,"C
+
+(Erythema multiforme is a common condition characterized by a distinctive ""targetoid"" appearance of the nails, along with oral and skin lesions.",1,"B ||| B ||| A. ||| C
+
+E ||| C
+
+Erythromelalgia"
+medqa_test_0010,B,1,D ||| B ||| D ||| B ||| C
+medqa_test_0011,"C
+
+Imatinib is the most appropriate next step in management.",1,"C
+
+Imatinib ||| C
+
+Imatinib ||| C ||| D ||| C."
+medqa_test_0012,B,1,B. Meningioma ||| B ||| B ||| B ||| B
+medqa_test_0013,D,1,"B ||| B ||| B ||| A
+ 
+The maneuver described, instructing the patient to stand up while the stethoscope is still on his chest, is known as the Valsalva maneuver or squatting maneuver. This change would lead to an increase in right atrial pressure due to the compression of the venous return from the lower body. ||| D"
+medqa_test_0014,D,1,D ||| D ||| D ||| B. ||| C
+medqa_test_0015,C,1,C ||| A. Acute cholecystitis ||| A. ||| D ||| C
+medqa_test_0016,C. IL-13,1,C. ||| C. ||| C. ||| C ||| C
+medqa_test_0017,D,1,D. Matching ||| D ||| D ||| D ||| D. Matching
+medqa_test_0018,B,1,"A. Indomethacin +/- omeprazole ||| B
+
+Ibuprofen + colchicine +/- omeprazole ||| A
+ 
+(Ibuprofen + colchicine) ||| B
+
+Ibuprofen + colchicine +/- omeprazole ||| B"
+medqa_test_0019,B,1,B ||| B ||| B ||| B ||| B
+medqa_test_0020,D,1,D ||| D ||| D ||| D ||| D
+medqa_test_0021,D,1,"A
+ 
+Chromosome 22q11 deletion syndrome (DiGeorge syndrome) is often associated with congenital heart defects, including Tetralogy of Fallot, which is characterized by a holosystolic murmur. ||| D ||| A
+22q11 deletion syndrome. ||| D ||| B
+
+The symptoms of a high-pitched holosystolic murmur in a 3-month-old infant, along with signs of decreased energy and listlessness, could be indicative of a heart condition such as Tetralogy of Fallot (TOF) or Ventricular Septal Defect (VSD), both of which are associated with a deletion of genes on chromosome 7. This deletion can lead to DiGeorge Syndrome, which is characterized by several congenital anomalies, including heart defects."
+medqa_test_0022,"C
+
+Histoplasma capsulatum infection",1,"C
+
+Histoplasma capsulatum infection ||| C
+
+Histoplasma capsulatum infection. ||| C
+
+Histoplasma capsulatum infection ||| C
+
+Histoplasma capsulatum infection ||| C
+
+Histoplasma capsulatum infection"
+medqa_test_0023,A. Streptococcus pneumoniae,1,"A
+Streptococcus pneumoniae. ||| D ||| A. Streptococcus pneumoniae ||| C
+
+Haemophilus influenzae ||| A."
+medqa_test_0024,"A
+
+B. Perform needle thoracostomy at the 2nd intercostal space",1,B ||| C ||| C. ||| B ||| B
+medqa_test_0025,D,1,D ||| D ||| D ||| D ||| D
+medqa_test_0026,D,1,D ||| D ||| B ||| D ||| D
+medqa_test_0027,"A
+ 
+Rifampin is a strong inducer of the CYP3A4 enzyme, which is responsible for metabolizing ethinylestradiol and progesterone, the active components of oral contraceptives.",1,"A
+Rifampin inhibits CYP2C9 and CYP3A4, increasing the metabolism of ethinylestradiol and progesterone, leading to decreased serum levels of these hormones. ||| A
+ 
+Rifampin, a potent inducer of CYP3A4, decreases the bioavailability of ethinylestradiol and progesterone, leading to contraceptive failure. ||| A
+ 
+Rifampin is a potent inducer of the CYP3A4 enzyme, which decreases the serum levels of ethinylestradiol and progesterone, leading to reduced efficacy of the oral contraceptive. ||| A
+ 
+Rifampin is an inducer of CYP3A4, which increases the metabolism and decreased the serum levels of ethinylestradiol and progesterone in oral contraceptives. ||| A
+ 
+Rifampin induces CYP3A4, which increases the metabolism and decreased levels of ethinylestradiol and progesterone in oral contraceptives."
+medqa_test_0028,B,1,B ||| D ||| C ||| D ||| B
+medqa_test_0029,A. Foot abduction brace,1,"A. ||| D ||| D ||| D ||| A
+
+Explanation not available."
+medqa_test_0030,D,1,D ||| C ||| D. ||| A. ||| B
+medqa_test_0031,C,1,C. ||| C ||| C. ||| C. ||| C
+medqa_test_0032,D,1,B ||| D ||| A. Doxycycline ||| B ||| C
+medqa_test_0033,C,1,"D ||| C ||| D
+
+Gastric atrophy with loss of parietal cells (autofagia) is often seen in conditions with decreased intrinsic factor, which would also explain the weight loss and diarrhea. Exogenous somatostatin or gastrin secretion would cause similar gastric symptoms and atrophy. ||| D ||| D"
+medqa_test_0034,B,1,"D. ||| D. ||| A. Insulin, potassium, IV fluids, and glucose ||| D ||| B"
+medqa_test_0035,"C
+
+Pitting of the nails is more characteristic of rheumatoid arthritis.",1,"C
+
+Pitting of the nails and the clinical picture described is highly suggestive of Rheumatoid Arthritis (RA). ||| C
+
+Pitting of the nails is a classic sign associated with rheumatoid arthritis. ||| C
+
+Pitting of the nails is associated with rheumatoid arthritis. ||| C
+
+Rheumatoid arthritis is characterized by symmetrical joint involvement, pain improvement with rest, and other systemic symptoms such as morning stiffness, dandruff, and pitting of the nails. ||| C"
+medqa_test_0036,C,1,B ||| B ||| B ||| C ||| B
+medqa_test_0037,D,1,D ||| D ||| D ||| D ||| D
+medqa_test_0038,D,1,"B
+
+0.5 ||| D
+ 
+47/52 ||| D
+
+ 0.5 ||| A. 0.375 ||| A. 0.375"
+medqa_test_0039,"C
+
+The patient's inability to complete tasks involving verbal repetition suggests Broca's aphasia, which is characterized by non-fluent, effortful speech, and difficulty with repetitive verbal tasks. The arcuate fasciculus is a bundle of axons that connects the inferior frontal gyrus (Broca's area) and the superior temporal gyrus (Wernicke's area), which are involved in speech production and comprehension. Damage to this structure would disrupt the connection between these two areas, leading to Broca's aphasia.",1,"A
+
+(Explanation: Broca's Aphasia, characterized by non-fluent speech with preserved comprehension, results from damage to the inferior frontal gyrus and superior temporal gyrus, particularly the Broca's area, but not necessarily the arcuate fasciculus.) ||| A
+
+Arcuate fasciculus is a structure that connects the inferior frontal gyrus (Broca's area) and the superior temporal gyrus (Wernicke's area). Damage to this structure can lead to difficulty with repetition of words or phrases, such as the patient's inability to complete tasks involving verbal repetition. ||| C
+ 
+inferior frontal gyrus + superior temporal gyrus ||| A. Arcuate fasciculus ||| C
+ 
+In this scenario, the patient exhibits Broca's aphasia, characterized by non-fluent speech with a preserved ability to comprehend. This is often associated with damage to the inferior frontal gyrus and the arcuate fasciculus, which is involved in the connection between this region and Broca's area."
+medqa_test_0040,C,1,C ||| C. ||| C. ||| C. ||| C.
+medqa_test_0041,C,1,C ||| C ||| C ||| C ||| C
+medqa_test_0042,C,1,C ||| C ||| C ||| C ||| C
+medqa_test_0043,B,1,C ||| D ||| A. Inferior vena cava ||| A. Inferior vena cava ||| A. Inferior vena cava
+medqa_test_0044,C,1,"C ||| C ||| A
+A. Globular 10-week sized uterus ||| C ||| A. Globular 10-week sized uterus"
+medqa_test_0045,C,1,"D ||| C
+
+ (Naloxone is used to treat opioid overdose, and the patient's symptoms do not strongly suggest opioid intoxication. ||| D ||| D ||| A. Ethanol"
+medqa_test_0046,B. 16,1,B. 16 ||| C. 20 ||| B. 16 ||| B. 16 ||| D. 50
+medqa_test_0047,B.,1,B ||| B ||| D ||| D ||| B
+medqa_test_0048,C.,1,"A
+ 
+Please let me know if you need help with anything else. ||| B ||| B ||| B ||| C
+
+The provided information points towards a stillbirth diagnosis, which typically requires an autopsy to determine the cause of death and to identify any potential underlying genetic or chromosomal abnormalities. While karyotyping of amniotic fluid (A) may be done in some cases of stillbirth to evaluate for chromosomal abnormalities, it is not the most comprehensive next step. Obtaining consent for parental genetic testing (D) is also not necessary at this point, as the decision has likely already been made by the parents considering the stillbirth. Obtaining photographs, x-ray imaging, and MRI (C) is also not the most appropriate next step for a stillbirth diagnosis.
+
+However, based on the options given, C is the closest match to the correct management."
+medqa_test_0049,D,1,D ||| D ||| D ||| D ||| D
+medqa_test_0050,A.,1,D ||| D ||| D ||| A. ||| D
+medqa_test_0051,"A
+
+(Note: The patient's low potassium level (K+: 3.3 mEq/L) is a key finding that points towards aldosterone excess, a common cause of secondary hypertension in patients with renal tubular acidosis or other conditions that lead to aldosterone overproduction.)",1,"A ||| D ||| A
+
+NaCl retention due to aldosterone excess leading to volume expansion & increased peripheral resistance is the likely cause. ||| C ||| D"
+medqa_test_0052,D,1,B ||| D ||| D ||| D ||| B
+medqa_test_0053,"C
+
+Atropine is the treatment of choice for anticholinergic side effects, such as dry mouth, blurred vision, constipation, urinary retention, and confusion.",1,"B ||| C
+
+Atropine will counteract the anticholinergic side effects of galantamine. ||| B ||| B ||| D"
+medqa_test_0054,A. Tardive dyskinesia,1,A. Tardive dyskinesia ||| A. Tardive dyskinesia ||| A. Tardive dyskinesia ||| A. Tardive dyskinesia ||| A. Tardive dyskinesia
+medqa_test_0055,"A
+KOH examination of lesion scrapings",1,"A
+KOH examination of lesion scrapings ||| A
+KOH examination of lesion scrapings ||| D ||| D ||| A
+KOH examination of lesion scrapings"
+medqa_test_0056,C,1,"C
+
+Gynecomastia is a side effect more commonly associated with risperidone compared to other atypical antipsychotics. ||| C ||| C
+
+Gynecomastia ||| C ||| C"
+medqa_test_0057,B,1,"C
+
+T Cell Receptor ||| B ||| B ||| D ||| B"
+medqa_test_0058,C,1,C ||| C. ||| C ||| C ||| C
+medqa_test_0059,C,1,C ||| C. ||| B ||| B ||| C
+medqa_test_0060,"C
+
+Salmonella typhi",1,"C
+
+ Salmonella Typhi ||| C
+
+(Salmonella typhi) ||| C
+
+Salmonella typhi ||| C
+
+ Salmonella Typhi ||| C
+
+ Salmonella Typhi"
+medqa_test_0061,"A
+
+Acetaldehyde",1,"A
+
+Acetaldehyde ||| A
+
+Acetaldehyde ||| A
+ 
+ Acetaldehyde is a toxic metabolite of alcohol that is primarily produced by the action of the enzyme aldehyde dehydrogenase. ||| A
+
+Acetaldehyde is the primary intermediate in the metabolism of ethanol, and its levels would be expected to increase following alcohol consumption. ||| A. Acetaldehyde"
+medqa_test_0062,C,1,"B ||| C ||| C
+
+D ||| B
+
+ Serum B12 level ||| B
+
+Iron deficiency anemia is suggested by the low Hb and HCT levels, as well as the reticulocyte count being low and the MCV being low."
+medqa_test_0063,C,1,"C ||| A
+ 
+Insert a ‘straight cath’ into the patient’s bladder ||| A
+
+A ||| C ||| C."
+medqa_test_0064,D,1,"A
+ 
+D ||| C ||| A
+ 
+Explanation: Herpes simplex virus (HSV) is the most likely cause of oral ulcers in this patient, as indicated by the presence of painless oral ulcers (pseudomembranes) and the patient's high-risk sexual behavior. Treatment for HSV typically involves antiviral medications that target viral DNA replication, such as acyclovir. Acyclovir works by disrupting viral DNA synthesis, which aligns with option A. ||| A
+ 
+ Antibiotic treatment with metronidazole is often used in cases of oral thrush, which is typically caused by Candida albicans, a fungal infection. ||| A
+ 
+Fungal infections of the oral cavity are common among athletes, with Candida being the most common."
+medqa_test_0065,A.,1,C ||| B ||| B ||| C ||| B
+medqa_test_0066,B,1,C ||| B ||| B ||| A. ||| A.
+medqa_test_0067,B,1,B ||| B ||| B ||| B ||| B
+medqa_test_0068,D,1,"C
+
+Explanation: Octreotide promotes vasoconstriction which can exacerbate the condition, therefore, a vasodilator is preferred. ||| B ||| C ||| B ||| A
+ 
+Phentolamine."
+medqa_test_0069,C,1,D ||| B ||| B ||| C ||| C
+medqa_test_0070,C,1,"A
+
+(Explanation not provided) ||| C ||| C ||| C ||| C"
+medqa_test_0071,A. Cardiac contusion,1,"A. Cardiac contusion ||| A
+ 
+Cardiac contusion. ||| A
+
+Ringer lactate solution and morphine are both being used to manage pain, and to reduce anxiety. ||| B ||| C"
+medqa_test_0072,C,1,D ||| C ||| C ||| D ||| B
+medqa_test_0073,"C
+
+Propranolol, a beta-blocker, is often used to treat symptoms of hyperthyroidism, such as tremors and tachycardia, without affecting thyroid hormone levels.",1,"C
+
+Propranolol is used to treat symptoms of hyperthyroidism such as tremors, warm skin, and rapid heart rate. ||| C
+
+Propranolol is the best treatment option for this patient, as it is the only drug that directly addresses the symptoms of excessive heat intolerance and tremors, which are likely due to thyroid hyperthyroidism. ||| C
+
+Propranolol, a beta-blocker, can help manage the symptoms of hyperthyroidism, such as tremors and tachycardia, in addition to reducing the peripheral conversion of T4 to T3, thereby decreasing the patient's symptoms. ||| C
+
+Propranolol is used to treat symptoms of hyperthyroidism such as tremors, and also can be used to treat heat intolerance in hyperthyroid patients. ||| C
+
+Propranolol is the best single treatment option for this patient as it effectively controls symptoms of hyperthyroidism."
+medqa_test_0074,D,1,"D ||| A. Wood lamp examination ||| C ||| D ||| C
+
+Potassium hydroxide (KOH) preparation is a diagnostic tool often used to identify fungal infections, and the patient's symptoms (pruritus and hypopigmented rash) and recent travel to the Bahamas (an area prone to leishmaniasis, a disease spread by sand flies) are suggestive of cutaneous leishmaniasis."
+medqa_test_0075,C.,1,"A. 7 ||| C ||| B
+ 
+Explanation for test-takers: This question is related to a classic example of a genetic disorder: Cri-du-chat syndrome, also known as 5p syndrome, which is caused by a deletion in the short arm of chromosome 5. ||| A
+
+(Trisomy 18) ||| A
+5"
+medqa_test_0076,B,1,B. ||| B ||| B ||| B ||| B
+medqa_test_0077,C,1,B ||| A. Deposition of urate crystals ||| B ||| C ||| B
+medqa_test_0078,"C
+
+Transposition of great vessels.",1,"C
+
+Transposition of great vessels. ||| C
+
+""Truncus arteriosus"" was not listed in the options. ||| C
+
+""Machine-like murmur"" and ""egg-shaped heart"" are classic descriptions of a truncus arteriosus. ||| C
+
+Transposition of Great Vessels ||| C
+
+Transposition of great vessels is a congenital heart defect where the aorta and pulmonary arteries are reversed, leading to an ""egg-shaped"" heart. The loud S2 heart sound is consistent with a ventricular septal defect (VSD), which would cause the characteristic murmur. The atrial septostomy is a palliative procedure often performed in cases of transposition of great vessels to allow for mixing of blood between the atria until definitive surgery can be performed."
+medqa_test_0079,C,1,D ||| C ||| C. ||| C ||| C
+medqa_test_0080,B,1,D ||| B. ||| B ||| C ||| C
+medqa_test_0081,D,1,"D ||| D ||| D ||| B ||| C
+
+Cyclin-dependent kinase 4"
+medqa_test_0082,C,1,"C
+
+ Acral lentiginous melanoma is more common in African-American women. ||| C ||| D ||| D ||| C"
+medqa_test_0083,"A
+
+C. Gastroesophageal reflux",1,"B ||| A
+ 
+B. ||| A. ||| A
+ 
+The patient's elevated erythrocyte sedimentation rate (ESR) and C-reactive protein (CRP) levels indicate inflammation, and her symptoms of neck stiffness and bilateral shoulder tenderness suggest a potential inflammatory or autoimmune condition. Screening for giant cell arteritis (GCA) is indicated, which is a common cause of temporal arteritis and can be associated with jaw claudication. ||| A."
+medqa_test_0084,B,1,D ||| A. ||| B ||| C ||| C
+medqa_test_0085,D,1,"C ||| C ||| C
+
+Papillary muscle rupture would be most helpful in establishing a diagnosis of acute rheumatic fever. ||| C
+
+Papillary muscle rupture would lead to mitral regurgitation and would explain the hemorrhages on the nail beds (Janeway lesions), which are a result of the bacterial seeding of the nail bed. ||| B"
+medqa_test_0086,C,1,"D ||| C
+
+Laparoscopy is the most appropriate next step in management as it can help identify adhesions or endometriosis. ||| D ||| C
+
+Explanation: Due to lack of clear evidence for pelvic pathology or endometriosis on ultrasound and the patient's symptoms do not indicate a more invasive procedure as an initial next step. ||| C"
+medqa_test_0087,D,1,D ||| C ||| D ||| D ||| C. High LDL-cholesterol
+medqa_test_0088,B,1,C. ||| B ||| D ||| B ||| C.
+medqa_test_0089,B,1,B ||| B ||| B ||| B ||| B
+medqa_test_0090,D,1,C ||| D ||| D ||| D ||| D
+medqa_test_0091,B,1,B ||| B ||| B ||| B. Normal hemoglobin in patients with tetralogy of Fallot does not rule out iron deficiency anemia. ||| B.
+medqa_test_0092,C,1,C ||| C. Delirium ||| C ||| C ||| C
+medqa_test_0093,C,1,C ||| C ||| C ||| C ||| C
+medqa_test_0094,D,1,D ||| D ||| D ||| D ||| C
+medqa_test_0095,"A
+ 
+- The patient's father had a kidney transplant in the forties, suggesting a possible familial component to the patient's condition.
+- The patient presents with hypertension, poorly controlled despite maximum doses of several antihypertensive medications, and bilateral palpable flank masses.
+- The combination of hypertension and flank masses, along with a family history of kidney disease, is highly suggestive of renal artery stenosis (RAS).
+- RAS is a common cause of secondary hypertension and can lead to end-organ damage, including renal failure.
+- MR angiography of the brain is the most appropriate test to screen for additional complications of RAS, as it can detect intracranial aneurysms and other vascular abnormalities that may be associated with RAS.
+- The other options are not directly related to the patient's condition and are therefore not the most appropriate next steps.",1,"D ||| D ||| C. ||| D ||| C
+
+Liver function tests"
+medqa_test_0096,D,1,"D ||| D
+
+Alpha-thalassemia, specifically Hb Bart's syndrome, presents with severe anemia and shortness of breath, and is consistent with this presentation and response to treatment (desferrallo sulfate, a transfusional iron chelator). ||| D
+
+ Alpha-1 antitrypsin deficiency ||| D ||| C"
+medqa_test_0097,B,1,B ||| B ||| B ||| B ||| B
+medqa_test_0098,B,1,"A. ||| B ||| A. ||| A
+
+B. Cervical immobilization
+C. IV methylprednisolone
+D. Observation overnight ||| B"
+medqa_test_0099,B,1,D ||| D ||| B ||| B ||| B
+medqa_test_0100,B,1,B ||| B ||| B ||| B ||| B
+medqa_test_0101,"C
+
+Levodopa is the most likely answer because it is commonly used to treat Parkinson's disease, a condition characterized by motor symptoms such as rigidity, tremors, and bradykinesia (slow movement).",1,"D ||| C
+
+Levodopa is the drug of choice for Parkinson's disease, which the patient's symptoms are suggestive of. ||| D ||| A. Amantadine ||| A. Amantadine"
+medqa_test_0102,C,1,"A. ||| C ||| A. Stop magnesium sulfate and give calcium gluconate ||| C
+
+ Calcium gluconate is administered to counteract the effect of magnesium on neuromuscular transmission. ||| C."
+medqa_test_0103,A.,1,"A
+ 
+myxedema coma ||| A
+ 
+ Myxedema coma ||| A
+ 
+Myxedema coma ||| A
+
+Myxedema Coma ||| A
+Myxedema coma"
+medqa_test_0104,B,1,"A
+ 
+Mitral regurgitation. ||| C. Aortic stenosis ||| A. ||| D ||| B"
+medqa_test_0105,B,1,B ||| B ||| B ||| B ||| B
+medqa_test_0106,B,1,C ||| B ||| A. CT chest without contrast in 24 months ||| D ||| D
+medqa_test_0107,C,1,B ||| B ||| B ||| C ||| C
+medqa_test_0108,D,1,"B ||| A
+
+Explanation: Developmental Dysplasia of the Hip (DDH) is a common cause of severe hip pain in children, particularly those with a history of obesity. The presentation in this case is suggestive of slipped capital femoral epiphysis (SCFE), which requires prompt treatment to prevent femoral shortening and avascular necrosis. The best management option for SCFE is surgical pinning of the femoral head to correct the dislocation and promote healing. ||| D ||| B
+
+Pavlik harness is used for Developmental Dysplasia of the Hip (DDH) treatment ||| B."
+medqa_test_0109,C,1,"C ||| C ||| C ||| A
+
+Explanation: Increased serum VIP levels can cause watery diarrhea, abdominal cramps, and weight loss, which match the patient's symptoms. ||| D"
+medqa_test_0110,C,1,A ||| C ||| C ||| C ||| C
+medqa_test_0111,D,1,A ||| B ||| A ||| B ||| D
+medqa_test_0112,A. Decreased lower esophageal tone,1,"B ||| C
+
+ Decreased lower esophageal tone ||| B ||| C
+
+ Decreased lower esophageal tone 
+
+ is not listed as an option. ||| D"
+medqa_test_0113,C,1,B ||| C ||| C ||| C ||| C
+medqa_test_0114,B,1,"B ||| C ||| A
+HCO3- 23 mEq/L, ||| D ||| B. Diarrhea."
+medqa_test_0115,D,1,D ||| C ||| D ||| D ||| C
+medqa_test_0116,B,1,"B ||| B ||| B
+
+NF2 gene on chromosome 22 ||| B ||| B"
+medqa_test_0117,"C
+
+Metformin",1,"C
+
+Metformin toxicity with lactic acidosis and hyperkalemia. ||| C ||| C. ||| C
+
+Methotrexate toxicity ||| C
+
+Metformin"
+medqa_test_0118,D.,1,D ||| D ||| D ||| D ||| D.
+medqa_test_0119,"C
+
+Avoid exposure to birds",1,"D ||| C
+
+Avoid exposure to birds ||| C
+
+ Avoid exposure to birds ||| C
+
+Avoid exposure to birds ||| C"
+medqa_test_0120,C,1,C ||| D ||| D ||| C ||| D
+medqa_test_0121,"A
+ 
+Epstein-Barr virus",1,"A
+Epstein-Barr virus (EBV) is indeed linked to Hodgkin's lymphoma, a fact that has been documented in numerous studies. The association between EBV and this particular cancer makes option A the most likely choice. ||| A. ||| A. ||| A. Epstein-Barr virus ||| A."
+medqa_test_0122,D,1,D ||| D ||| D ||| D ||| D
+medqa_test_0123,"A
+
+(No additional explanation provided)",1,"A
+
+D ||| A
+
+(No picture can be displayed, please provide a text description of the head CT findings to assist in answering the question) ||| A
+
+Mixed Platelet Aggregation Study ||| C
+
+Testing for DIC ||| B"
+medqa_test_0124,C,1,C ||| C ||| D ||| B ||| D
+medqa_test_0125,B.,1,"A
+
+Explanation: PPD (purified protein derivative) test is a screening tool for latent TB infection, and a PPD with 10 mm or less is generally considered negative. The nurse's PPD with 17 mm is considered positive. According to the CDC guidelines, a PPD with 15 mm or greater in a healthcare worker indicates that no further action is required and the nurse should return to work. ||| B ||| B. ||| A. Isoniazid ||| B"
+medqa_test_0126,"A
+ 
+Uncus herniation is consistent with the patient's symptoms of left pupil dilation (miosis), right-sided visual field defect, and right hemiparesis.",1,"A
+
+(No additional text provided.) ||| A. ||| A
+
+(Additional answer text not available, as it is not provided in the given question format.) ||| A
+ 
+Let's help you improve your USMLE preparation. Here's a quick rundown of what we discussed:
+ 
+ 1.  The patient presents with a history of hypertension and atrial fibrillation, which increases the risk of stroke and TIA.
+ 2.  The patient's symptoms of chest palpitations, disorientation, and unilateral pupil dilation suggest a mass effect in the brain, such as a tumor or aneurysm.
+ 3.  The CT scan shows a mass in the brain, but the specific location is not specified.
+ 4.  The patient's right-sided visual field defect and hemiparesis suggest that the mass is located in a region that affects the optic nerve and the motor cortex, respectively.
+ 5.  The patient's symptoms and the CT scan findings suggest a herniation of the uncus, which is a type of brain herniation that occurs when the uncus of the temporal lobe herniates through the tentorial notch and compresses the cranial nerve VII (facial nerve), leading to ipsilateral facial weakness and contralateral visual field defects.
+
+In this scenario, the patient's symptoms are consistent with a herniation of the uncus, which is a medical emergency that requires prompt surgical intervention. The other options are less likely to explain the patient's symptoms, as occlusion of the basilar artery would likely cause more widespread neurological symptoms, occlusion of the anterior spinal artery would cause symptoms related to the spinal cord, and herniation of the cingulate gyrus is not a well-defined term in neurosurgery. ||| C
+
+The CT scan is not visible in the provided information, but the symptoms and physical examination results can guide the answer. The left pupil is dilated and unresponsive, while the right pupil is normal. This is a classic sign of a transtentorial herniation, specifically uncal herniation, which occurs when the uncus of the temporal lobe herniates through the tentorial notch, compressing the left third cranial nerve."
+medqa_test_0127,C,1,C ||| C ||| C ||| C ||| C.
+medqa_test_0128,D,1,"A
+Muscle biopsy with intrafascicular (within muscle fibers) infiltration is often diagnostic for myasthenia gravis. ||| D ||| D ||| A
+Muscle biopsy showing intrafascicular infiltration is diagnostic for myasthenia gravis. ||| C"
+medqa_test_0129,D,1,"D ||| C
+
+(A detailed explanation of the pathogenesis cannot be provided here. This response is provided solely for the purpose of answering the question as requested.) ||| A
+ 
+ Acetylcholine release ||| A
+
+Decreased acetylcholine release ||| A
+ 
+ Decreased acetylcholine release"
+medqa_test_0130,"A
+ 
+D",1,D ||| D ||| D ||| D ||| D
+medqa_test_0131,B,1,B ||| D ||| D ||| B ||| B. QT prolongation
+medqa_test_0132,A. Diverticulitis,1,A. Diverticulitis ||| D ||| A. ||| C ||| A.
+medqa_test_0133,B,1,"B
+
+Aortoiliac atherosclerosis is the most likely cause of this patient's erectile dysfunction, buttock pain, and weak lower extremity and femoral pulses, given his smoking history and symptoms of claudication. ||| B. Aortoiliac atherosclerosis ||| B ||| B
+
+Aortoiliac atherosclerosis is the most specific etiology of this patient's symptoms, given the patient's symptoms of erectile dysfunction, buttock and hip pain that is relieved by rest, and weak lower extremity and femoral pulses. ||| B
+
+Aortoiliac atherosclerosis."
+medqa_test_0134,"A. Increased PTH, decreased calcium, increased phosphate, decreased calcitriol",1,"C. Decreased PTH, decreased calcium, increased phosphate, decreased calcitriol ||| C ||| A. Increased PTH, decreased calcium, increased phosphate, decreased calcitriol ||| B ||| C"
+medqa_test_0135,C,1,C. Binds endogenous peptides that have been transported by the TAP channel ||| C ||| C ||| C ||| C
+medqa_test_0136,"C
+
+Gastroesophageal reflux disease (GERD) is likely the cause of the patient's chest pain, given the worsening of symptoms with large meals and spicy foods, and improvement with calcium carbonate (an antacid).",1,C. ||| C. ||| C. Gastroesophageal junction incompetence ||| C ||| B
+medqa_test_0137,B,1,B ||| B ||| D. ||| B ||| C.
+medqa_test_0138,B,1,B ||| B ||| B ||| B ||| B
+medqa_test_0139,B,1,C ||| D ||| C ||| D ||| C
+medqa_test_0140,C,1,"C ||| A ||| C
+
+Amoxicillin is the preferred treatment for Lyme disease. ||| C ||| C"
+medqa_test_0141,"D
+
+High dose dexamethasone suppression trial showing that cortisol levels do not decrease is suggestive of Cushing's disease. Since cortisol levels do not decrease during a low dose dexamethasone suppression test, the next best step would be an inferior petrosal sinus sampling.",1,"D
+
+24-hour urinary cortisol: 470 µg (< 300 µg) ||| D
+
+Confirm suspected Cushing's disease with inferior petrosal sinus sampling. ||| D
+
+Cushing's syndrome, indicated by a lack of cortisol suppression with high dose dexamethasone, requires further localization studies. ||| D
+
+Pigmented adenoma is the likely diagnosis in this case, but without imaging evidence, the best next step is Inferior petrosal sinus sampling. ||| D
+
+Inferior petrosal sinus sampling is the best next step in management, given the non-suppressive cortisol response to high-dose dexamethasone and elevated ACTH levels."
+medqa_test_0142,"A
+ 
+Inhibition of beta-tubulin polymerization",1,"A
+Inhibition of beta-tubulin polymerization ||| A
+Inhibition of beta-tubulin polymerization ||| C ||| A
+Inhibition of beta-tubulin polymerization. ||| A
+Inhibition of beta-tubulin polymerization"
+medqa_test_0143,B,1,B ||| B ||| B ||| B ||| B
+medqa_test_0144,C. Reassurance and follow-up,1,"C ||| C ||| C ||| C
+
+Reassurance and follow-up ||| A. Pelvic ultrasound"
+medqa_test_0145,"A
+Mesangial proliferation on light microscopy",1,C ||| C. Deposits of IgG and C3 at the glomerular basement membrane on immunofluoresence ||| C ||| B ||| B
+medqa_test_0146,D,1,D ||| C ||| D ||| D ||| D
+medqa_test_0147,D,1,D ||| D ||| D ||| D ||| D
+medqa_test_0148,B,1,B ||| B ||| B. ||| B ||| B
+medqa_test_0149,C.,1,"D ||| D ||| C ||| C
+
+Immunoglobulin A (IgA) provides the primary defense in response to the bacteria and toxins produced by Staphylococcus aureus, as IgA is the most abundant antibody isotype in mucosal surfaces and provides protection against pathogens that enter through these routes. ||| C."
+medqa_test_0150,A. Levofloxacin,1,A. Levofloxacin ||| A. Levofloxacin ||| A. Levofloxacin ||| A. Levofloxacin ||| A.
+medqa_test_0151,D,1,D ||| D ||| D ||| D ||| D
+medqa_test_0152,B,1,D ||| B ||| D ||| B ||| D
+medqa_test_0153,A. Previous suicide attempt,1,"C ||| A
+
+Sleeping disorder ||| A
+ 
+(This is the correct answer based on current medical knowledge, but it is always best to verify with up-to-date resources.) ||| A
+ 
+(Previous suicide attempt carries the strongest risk factor for future suicide in this patient) ||| C"
+medqa_test_0154,C,1,C ||| C ||| C ||| C ||| C
+medqa_test_0155,D,1,B ||| D ||| D ||| D ||| D
+medqa_test_0156,B,1,"A. Glycopyrrolate ||| B
+
+Benztropine is the answer because this patient has a clinical presentation suggestive of an acute dystonic reaction, which is a known side effect of antipsychotic medication. ||| B ||| A
+
+Glpycopyrrolate is administered to reduce secretions, and treat hyperthermia and hypertonia. ||| B"
+medqa_test_0157,"A
+
+(Answer: Hypertriglyceridemia)",1,"A
+
+Explanation: APOC2 is associated with abetalipoproteinemia, a rare inherited disorder that affects fat absorption. This disorder increases the risk of pancreatitis, as lipids accumulate in the pancreas and stimulate pancreatic enzymes, leading to pancreatitis. ||| A
+D ||| C ||| A
+ApoC2 deficiency leads to elevated triglyceride levels, which increases the risk of pancreatitis. ||| A
+ 
+The condition associated with the APOC2 mutation is abetalipoproteinemia, which increases the risk of developing acute pancreatitis due to high levels of cholesterol and triglycerides in the blood."
+medqa_test_0158,C,1,"C
+
+Calcium gluconate is given immediately to treat hypocalcemia, which is suspected in this patient given the symptoms of numbness, muscle cramping, and spasms. ||| C. ||| C ||| C ||| C"
+medqa_test_0159,B,1,B ||| D ||| D ||| B ||| D
+medqa_test_0160,C,1,"C ||| C ||| D ||| D
+ 
+3 ||| D"
+medqa_test_0161,"C
+
+In this patient, the presence of high titers of serum anti-Ro and anti-La autoantibodies, along with symptoms of Sjögren's syndrome, increases the risk for developing certain types of cancer. 
+
+The correct answer is C.",1,"C
+
+Invasive ductal carcinoma of the breast ||| C. Invasive ductal carcinoma of the breast. ||| C. ||| C ||| B"
+medqa_test_0162,"C
+
+Linear IgG staining on immunofluorescence",1,"C
+
+Linear IgG staining on immunofluorescence ||| C
+
+Linear IgG staining on immunofluorescence. ||| C ||| C ||| C
+
+ Linear IgG staining on immunofluorescence"
+medqa_test_0163,C,1,"A
+ 
+( Answer: Histoplasma capsulatum can be cultured on Sabouraud agar.) ||| B ||| C
+
+(Note: The question stem suggests a fungal infection, which can be cultured on Sabouraud agar. The pathogen isolated from the CSF, which can be cultured on Sabouraud agar, is likely Coccidioides immitis or C. posadasii, causing coccidioidomycosis or coccidioidomycosis-like illness. Coccidioidomycosis is associated with a high adenosine deaminase (ADA) concentration in the CSF.) ||| A
+ 
+(Note: Fungal infection, likely Cryptococcal meningitis, is common in HIV patients and can be cultured on Sabouraud agar.) ||| C"
+medqa_test_0164,B,1,"B ||| B ||| A
+ 
+Intradermal Bartonella or Lyme disease rashes are often characterized by a distinctive long, erythematous rash covered with multiple clear vesicles and crusty lesions. ||| B
+ 
+The patient's symptoms, such as a burning pain in the upper right back and chest, a long erythematous rash with clear vesicles and crusty lesions, and no recent injury or back pain history, are highly suggestive of shingles (herpes zoster), caused by reactivation of varicella-zoster virus in the dorsal root ganglia. ||| B"
+medqa_test_0165,C.,1,C ||| D ||| A. ||| A. Using survival rates in the analysis ||| C
+medqa_test_0166,"A
+Interstitial lung disease (ILD) with a specific radiographic pattern, known as ""eggshell calcification"" or ""halo"" calcification, is highly suggestive of asbestosis.",1,"A
+ 
+ Silicosis ||| C ||| B ||| B. ||| B"
+medqa_test_0167,C,1,C ||| C. ||| C ||| C. ||| C.
+medqa_test_0168,B,1,D ||| B ||| B ||| B ||| B
+medqa_test_0169,C,1,C ||| C. ||| C. ||| C ||| C
+medqa_test_0170,"C
+
+(Conjunctival injection)",1,"C. Miosis ||| C ||| C. Miosis ||| C
+
+Coagulopathy, which would explain the patient's inability to maintain a patent airway (dyspnea and low respiratory rate), would most likely be found on examination in a trauma patient who is being resuscitated in the trauma bay. ||| D"
+medqa_test_0171,B,1,"D ||| D ||| B ||| C ||| A
+ 
+Cleft palate is a common finding in cases of IUGR and other congenital anomalies, often as part of the VACTERL association (Vertebral, Anal, Cardiac, Tracheo-Esophageal, Renal, and Limb anomalies). This association is also seen in some cases of limb abnormalities, which include the clenched fists and overlapping fingers described in this patient."
+medqa_test_0172,B,1,"B ||| B ||| B
+
+ Lorazepam ||| B ||| B"
+medqa_test_0173,D,1,A. Increase in serum ACTH ||| D ||| A. Increase in serum ACTH ||| C ||| D. Increase in serum cortisol
+medqa_test_0174,D,1,D ||| D ||| D ||| D ||| D
+medqa_test_0175,D,1,"C ||| D ||| D ||| D ||| A
+ 
+ CT scan of the chest"
+medqa_test_0176,A. 580 / (20 + 590),1,C. 590 / (590 + 10) ||| B. 580 / (10 + 580) ||| B. 580 / (10 + 580) ||| D. 580 / (580 + 20) ||| C. 590 / (590 + 10)
+medqa_test_0177,C,1,C ||| C. ||| C ||| C ||| C
+medqa_test_0178,C.,1,C ||| C ||| C ||| B ||| C
+medqa_test_0179,C,1,C. ||| C. ||| C ||| C. Chlamydia trachomatis infection. ||| C
+medqa_test_0180,"C
+
+Large platelets (thrombocytosis) and hypochromia, along with normal platelet aggregation test with ristocetin, point towards Bernard-Soulier disease.",1,"C ||| C ||| C
+
+(Bernard-Soulier disease) ||| C
+
+Large platelets, normal platelet aggregation with ristocetin, and an increased bleeding time point towards Bernard-Soulier disease. ||| C"
+medqa_test_0181,B,1,"D ||| B ||| A
+
+Adenovirus ||| D ||| C"
+medqa_test_0182,B,1,"A. Klinefelter syndrome ||| B ||| C ||| A
+
+ Breast fibroadenoma. ||| B"
+medqa_test_0183,C,1,D ||| C ||| D ||| B. Thrombin inhibitor deficiency ||| A. Elevated serum homocysteine
+medqa_test_0184,D,1,D ||| D ||| D ||| D ||| D
+medqa_test_0185,D,1,D ||| D ||| D ||| D ||| D
+medqa_test_0186,D,1,B ||| A. The ribosome will recognize the mischarged tRNA and prevent its incorporation by removing the valine ||| C ||| B ||| B
+medqa_test_0187,B.,1,B ||| B ||| B ||| B ||| B
+medqa_test_0188,C,1,C. ||| C ||| D ||| C ||| C
+medqa_test_0189,C,1,C ||| C ||| C ||| B ||| C. Erosion of tooth enamel
+medqa_test_0190,"C
+
+Propranolol, a beta-blocker, is commonly used for the long-term management of panic disorder to reduce symptoms of anxiety and prevent panic attacks.",1,"C
+
+Propranolol is often used as a beta-blocker to help alleviate physical symptoms of anxiety disorders, such as palpitations, tremors, and tachycardia. ||| A. Citalopram ||| B ||| C
+
+Propranolol ||| C
+
+Propranolol"
+medqa_test_0191,D,1,D ||| D ||| D ||| C ||| D
+medqa_test_0192,D,1,D ||| D ||| D ||| D ||| D
+medqa_test_0193,C,1,C ||| C. ||| C ||| C ||| C.
+medqa_test_0194,C,1,"B ||| C ||| C ||| C. Conversion of aminolevulinic acid to porphobilinogen ||| C
+
+(Porphyria cutanea tarda)"
+medqa_test_0195,C.,1,C ||| C ||| C ||| C ||| C
+medqa_test_0196,B,1,C ||| D ||| C ||| A. Warfarin ||| C
+medqa_test_0197,B.,1,B ||| B ||| B. ||| B ||| B
+medqa_test_0198,"A
+
+Corrected Answer: C",1,"C
+
+(Clomiphene citrate) ||| C ||| C ||| C ||| C"
+medqa_test_0199,D,1,"B ||| B ||| B ||| C
+
+Cortical thinning with tubular atrophy ||| B"
+medqa_test_0200,D,1,"D ||| A
+
+B ||| A
+
+ Urine ketones ||| A
+
+B ||| A
+
+ Urine ketones are expected given the patient's history of recent intoxication with ethanol."
+medqa_test_0201,D,1,D ||| D ||| B ||| B ||| D
+medqa_test_0202,B,1,B ||| B ||| B ||| B ||| B
+medqa_test_0203,D,1,D ||| A. Benznidazole ||| A. Benznidazole ||| A. Benznidazole ||| A. Benznidazole
+medqa_test_0204,B,1,C. ||| C ||| D ||| C. ||| B
+medqa_test_0205,"C
+
+(I) H. influenzae (II) Tetanus (III) N. meningitidis (IV) S. pneumoniae (V) Hepatitis B",1,"C
+
+(I) H. influenzae
+(III) N. meningitidis
+(IV) S. pneumoniae ||| B ||| D
+ 
+(I) H. influenzae (II) Tetanus (III) N. meningitidis (IV) S. pneumoniae (V) Hepatitis B ||| B
+ 
+I. H. influenzae
+II. Tetanus
+III. N. meningitidis
+IV. S. pneumoniae
+V. Hepatitis B ||| B"
+medqa_test_0206,D,1,"C ||| C
+
+LOD Score > 3 ||| C
+
+LOD Scores between 1 and 3 indicate linkage. ||| C ||| B"
+medqa_test_0207,C,1,"C ||| C ||| C
+
+Loop electrosurgical excision (LEEP) ||| C ||| C"
+medqa_test_0208,"A
+ 
+D",1,"C
+
+Explanation: Darunavir is a protease inhibitor, so DN501 would likely have the same mechanism of action as darunavir, which is inhibiting protease. ||| C ||| B ||| A
+
+Correct choice explanation is not provided here. ||| C
+
+Inhibits viral entry"
+medqa_test_0209,"C
+
+Actinic keratosis is the most likely diagnosis given the patient's history of long-term sun exposure as a fruit picker, which increases the risk of actinic keratosis, a precursor lesion to squamous cell carcinoma.",1,"A. Squamous cell carcinoma ||| C
+
+Actinic keratosis. ||| C
+
+Actinic keratosis. ||| C
+
+Actinic keratosis ||| C
+
+Actinic keratosis is the most likely diagnosis, given the patient's long history of smoking and sun exposure, which increases his risk for this type of skin cancer."
+medqa_test_0210,"C
+
+Explanation: The Rb gene is a tumor suppressor gene that regulates the cell cycle. When Rb is active, the cell cycle is halted in the G1 phase to allow for DNA repair and cell cycle progression. When Rb is inactivated, the cell cycle can progress to S phase. Drug X activates cyclin-dependent kinase 4 (CDK4), which phosphorylates and inactivates Rb, leading to cell cycle progression from G1 to S phase.",1,"A
+
+G1 phase arrest ||| A. G1 phase arrest ||| C
+
+Explanation: Drug X activates cyclin-dependent kinase 4, which phosphorylates the Rb protein and allows for cell cycle progression. ||| C ||| A. G1 phase arrest"
+medqa_test_0211,D,1,D ||| D ||| B ||| D ||| D
+medqa_test_0212,B,1,"B. Low number of patients ||| A. The study is a case series because it includes information on outcomes for a group of patients, whereas option A was not specified. ||| B. The study included a relatively small number of patients, which may not be considered a large enough sample size for certain analyses, and it may be classified as a case series because of the low number of participants. ||| A. No prevalence assessment ||| A. No prevalence assessment"
+medqa_test_0213,"A
+Acalculous cholecystitis.",1,"A
+Acalculous cholecystitis. ||| B. Calculous cholecystitis ||| A. Acalculous cholecystitis. ||| A. Acalculous cholecystitis ||| B"
+medqa_test_0214,B,1,"B
+
+Factitious disorder ||| B ||| B ||| B ||| B
+
+Factitious disorder."
+medqa_test_0215,A. Urinalysis and serum creatinine,1,"C ||| A
+
+Urinalysis and serum creatinine. ||| A. ||| C ||| C"
+medqa_test_0216,B,1,D ||| B ||| C ||| B. ||| C
+medqa_test_0217,C,1,C ||| C ||| C ||| C ||| C
+medqa_test_0218,D,1,D ||| D ||| D ||| D ||| D
+medqa_test_0219,B,1,"C ||| C ||| C
+
+Cystic fibrosis is a genetic disorder that affects multiple organ systems due to dysfunction in a transmembrane regulator. Cystic fibrosis can lead to thickened mucus, recurrent respiratory infections, malabsorption leading to poor weight gain, and pancreatic insufficiency. ||| C ||| B"
+medqa_test_0220,"C
+
+Decreased FEV1 and FVC with normal FEV1/FVC ratio",1,"B ||| B ||| C
+
+Inspiratory crackles, cough, and normal ejection fraction with idiopathic arrhythmia (amiodarone) and a chest radiograph not shown, these symptoms and history point to idiopathic pulmonary fibrosis (IPF) or other interstitial lung diseases, likely restrictive lung disease. The most likely finding on spirometry is a restrictive pattern, characterized by decreased FEV1 and FVC with a normal FEV1/FVC ratio. ||| B ||| A
+ 
+Decreased FEV1 and FVC with normal FEV1/FVC ratio."
+medqa_test_0221,A. Administer zidovudine,1,"A. Administer zidovudine ||| A
+
+HIV DNA testing ||| A. Administer zidovudine ||| B ||| C"
+medqa_test_0222,A. Binding to the alpha subunit of the insulin receptor,1,"D ||| B ||| A
+Incretin mimetics (GLP-1 receptor agonists) are exogenous substances that bind to GLP-1 receptors. ||| C ||| C"
+medqa_test_0223,C,1,"A. ||| A. ||| A. ||| A
+
+Endometrial sloughing and uterine contractions mediated by prostaglandin ||| A
+ 
+ Endometrial hyperplasia with an associated hormone-sensitive smooth muscle tumor of the myometrium, or uterine leiomyoma, is unlikely given the patient is only 15 years old and last menses was 5-6 days long."
+medqa_test_0224,C,1,C ||| B ||| B ||| C ||| C
+medqa_test_0225,"C
+
+Vitiligo",1,"C ||| C
+
+Vitiligo ||| C ||| C. Vitiligo ||| C."
+medqa_test_0226,"B
+
+(I. Blastic Niche Hairy Cell Leukemia)",1,"B ||| B
+
+Bleomycin ||| B ||| B ||| B"
+medqa_test_0227,"C
+
+Amphotericin B causes hypokalemia and hypomagnesemia, which can lead to hypokalemic alkalosis (increased pH and bicarbonate levels), consistent with the patient's laboratory findings.",1,"B ||| D ||| D ||| C
+
+Amphotericin B is known to cause hypomagnesemia due to renal magnesium excretion, which can lead to muscle weakness, cramps, and tetany. ||| B"
+medqa_test_0228,B,1,B. ||| B. ||| B ||| B ||| B
+medqa_test_0229,D,1,"D ||| C
+
+Bromocriptine ||| C ||| C ||| B
+
+Bromocriptine"
+medqa_test_0230,"B
+
+Coarctation of the aorta",1,"B
+
+ Coarctation of the aorta ||| B
+
+Coarctation of the aorta. ||| B
+
+Coarctation of the aorta ||| B
+
+ Coarctation of the aorta is the most likely diagnosis because of the brachiofemoral delay in the pulse, elevated blood pressure in the upper limb compared to the lower limb, notching of the ribs on the chest X-ray, and the presence of an ejection systolic murmur in the interscapular area. ||| B"
+medqa_test_0231,C,1,"C
+
+Staphylococcus aureus is commonly found in prosthetic joint infections, and the removal of the prosthetic joint helped to reduce the likelihood of the infection spreading. ||| C ||| C. Staphylococcus aureus ||| C. ||| C"
+medqa_test_0232,C,1,"C
+
+Let me know if you'd like me to clarify or elaborate on the answer. ||| D ||| D ||| D ||| C"
+medqa_test_0233,"A
+
+acid-fast bacteria",1,"A. ||| C ||| A ||| A. Acid-fast ||| A
+
+ Acid-fast bacilli, such as Mycobacterium leprae, cause leprosy."
+medqa_test_0234,"C
+
+γ-interferon is produced by activated T-lymphocytes in response to the presence of granuloma, as indicated by the lymph node biopsy.",1,"D ||| D ||| D ||| C
+
+Large CD15-positive, CD30-positive cells with bilobed nuclei are suggestive of anaplastic large cell lymphoma (ALCL), which can secrete γ-interferon, leading to elevated serum calcium levels. ||| B"
+medqa_test_0235,B,1,B ||| B. ||| B. Previous hepatitis A infection ||| B ||| B
+medqa_test_0236,"A
+ 
+Nucleotide excision repair is the process that corrects the mutations caused by UV light exposure, which is the likely cause of the infant's severe sunburns.",1,"A
+
+ Nucleotide excision repair ||| A. Nucleotide excision repair ||| A. ||| A. Nucleotide excision repair ||| A
+ 
+Nucleotide excision repair (NER) is a DNA repair mechanism that is responsible for repairing damage caused by ultraviolet (UV) light, which is a primary cause of sunburn. The impaired NER process in this patient is likely Xeroderma Pigmentosum (XP), a genetic disorder characterized by sensitivity to UV light and resulting in sunburn, skin cancer, and eye problems."
+medqa_test_0237,C,1,D ||| B ||| C. ||| D ||| C.
+medqa_test_0238,B,1,B ||| B ||| B. ||| B ||| A. Incidence rates will be higher during shorter time periods than longer periods.
+medqa_test_0239,D,1,"A
+Muscle biopsy ||| D ||| A
+Muscle biopsy ||| D ||| D"
+medqa_test_0240,D,1,D ||| D. ||| D. ||| D ||| D
+medqa_test_0241,D,1,D ||| B ||| C ||| D ||| D
+medqa_test_0242,"A
+
+B. Elevated serum alkaline phosphatase level",1,A. ||| C ||| B ||| B ||| D
+medqa_test_0243,C,1,C ||| C ||| D ||| B ||| C
+medqa_test_0244,"B
+
+Explanation: Cartilaginous structures such as the pinna contain type II collagen and chondroitin sulfate, which are characteristic components of cartilage.",1,"B ||| B ||| B
+
+(This indicates that the correct answer is B, but the response should include the letter and the answer text only. Here is the revised response:
+
+B. Pinna) ||| D ||| D"
+medqa_test_0245,C,1,C ||| C ||| C. ||| C ||| C
+medqa_test_0246,B,1,"A
+""Initial negative blood cultures do not preclude bacteremia; the positive result now is more likely to represent contamination."" ||| C
+
+This response is based on the correct answer provided in the question prompt. ||| C. ||| B ||| B"
+medqa_test_0247,B,1,B ||| D ||| B ||| D ||| B
+medqa_test_0248,B,1,B ||| B ||| C ||| C ||| B
+medqa_test_0249,C,1,"B. PPV decreases, NPV increases ||| C ||| B ||| C ||| C"

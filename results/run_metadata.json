@@ -1,0 +1,49 @@
+{
+  "started_utc": "2026-10-15T17:50:24.485365Z",
+  "finished_utc": "2026-10-15T18:45:58.772242Z",
+  "python": "3.11.17 (main, Oct  1 2026, 14:32:31) [GCC 13.3.0]",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "ollama_version": "ollama version is 0.40.4",
+  "gen_model": "llama3.2:3b",
+  "embed_model": "nomic-embed-text",
+  "n_items": 250,
+  "csv_files": {
+    "adaptive": "results/adaptive_results.csv",
+    "auas": "results/auas_results.csv",
+    "fixed": "results/fixed_results.csv"
+  },
+  "response_files": {
+    "fixed": "results/responses_fixed.csv",
+    "adaptive": "results/responses_adaptive.csv",
+    "auas": "results/responses_auas.csv"
+  },
+  "effective_config": {
+    "adaptive": {
+      "max_samples": 5,
+      "min_samples": 4,
+      "threshold": 0.85
+    },
+    "auas": {
+      "max_samples": 5,
+      "min_samples": 4,
+      "uncertainty_threshold": 0.15
+    },
+    "consistency_temperature": 1.0,
+    "data": {
+      "jsonl_path": "data/sample_run.jsonl",
+      "sample_ids_path": null,
+      "source": "jsonl"
+    },
+    "evaluation_temperature": 0.7,
+    "fixed": {
+      "n_samples": 5
+    },
+    "model": {
+      "base_url": "http://localhost:11434",
+      "embed_model": "nomic-embed-text",
+      "gen_model": "llama3.2:3b",
+      "timeout_s": 120.0
+    },
+    "seed": 13
+  }
+}
