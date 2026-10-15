@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import math
 from dataclasses import asdict
 from pathlib import Path
 
@@ -40,6 +41,23 @@ def _spearman_safe(x, y) -> tuple[float | None, float | None]:
     if pd.isna(rho) or pd.isna(p):
         return None, None
     return float(rho), float(p)
+
+
+def _spearman_ci(x, y, alpha: float = 0.05) -> tuple[float | None, float | None]:
+    n = len(x)
+    if n < 4:
+        return None, None
+    if x.nunique() < 2 or y.nunique() < 2:
+        return None, None
+    rho, _ = stats.spearmanr(x, y)
+    if pd.isna(rho) or abs(rho) >= 1.0:
+        return None, None
+    z = math.atanh(rho)
+    se = 1.0 / math.sqrt(n - 3)
+    z_crit = stats.norm.ppf(1 - alpha / 2)
+    lo = math.tanh(z - z_crit * se)
+    hi = math.tanh(z + z_crit * se)
+    return float(lo), float(hi)
 
 
 def _stop_reason_counts(sub: pd.DataFrame) -> dict[str, int]:
@@ -86,9 +104,18 @@ def _accuracy_by_sample_count(sub: pd.DataFrame) -> dict[str, dict]:
     }
 
 
+def _bonferroni(p: float | None, n_tests: int) -> float | None:
+    if p is None:
+        return None
+    return min(p * n_tests, 1.0)
+
+
 def spearman_summary(df: pd.DataFrame) -> dict:
     summary: dict = {}
-    for method in sorted(df["method"].unique()):
+    methods = sorted(df["method"].unique())
+    n_tests = len(methods) * 2
+
+    for method in methods:
         sub = df[df["method"] == method]
         valid = sub.dropna(subset=["consistency", "rouge_l"])
         valid_acc = sub.dropna(subset=["consistency", "accuracy"])
@@ -99,6 +126,9 @@ def spearman_summary(df: pd.DataFrame) -> dict:
         rho_acc, p_acc = _spearman_safe(
             valid_acc["consistency"], valid_acc["accuracy"]
         )
+
+        ci_rl = _spearman_ci(valid["consistency"], valid["rouge_l"])
+        ci_acc = _spearman_ci(valid_acc["consistency"], valid_acc["accuracy"])
 
         if "evaluation_starts_with_letter" in sub.columns and len(sub) > 0:
             letter_rate = float(
@@ -112,8 +142,12 @@ def spearman_summary(df: pd.DataFrame) -> dict:
             "n_with_accuracy": n_acc,
             "spearman_rho_consistency_rouge_l": rho_rl,
             "p_value_rouge_l": p_rl,
+            "p_value_rouge_l_bonferroni": _bonferroni(p_rl, n_tests),
+            "ci_95_rouge_l": list(ci_rl) if ci_rl[0] is not None else None,
             "spearman_rho_consistency_accuracy": rho_acc,
             "p_value_accuracy": p_acc,
+            "p_value_accuracy_bonferroni": _bonferroni(p_acc, n_tests),
+            "ci_95_accuracy": list(ci_acc) if ci_acc[0] is not None else None,
             "mean_consistency": float(sub["consistency"].mean())
             if sub["consistency"].notna().any()
             else None,
