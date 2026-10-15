@@ -1,13 +1,7 @@
 data:
   source: jsonl
-  jsonl_path: data/sample_100.jsonl
+  jsonl_path: data/sample_1000.jsonl
   sample_ids_path: null
-  # For the full run, switch to:
-  # source: hf
-  # dataset_name: GBaker/MedQA-USMLE-4-options
-  # split: test
-  # limit: 100
-  # sample_seed: 13
 
 model:
   gen_model: llama3.2:3b
