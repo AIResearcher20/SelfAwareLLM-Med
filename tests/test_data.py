@@ -41,6 +41,36 @@ def test_write_and_load_roundtrip(tmp_path: Path):
     assert loaded[1].options["B"] == "Diphenhydramine"
 
 
+def test_load_jsonl_supports_question_id_and_answer(tmp_path: Path):
+    path = tmp_path / "sample.jsonl"
+    row = {
+        "question_id": "medqa_test_0000",
+        "question": "q",
+        "options": {"A": "a", "B": "b", "C": "c", "D": "d"},
+        "answer": "a",
+        "answer_idx": "A",
+    }
+    path.write_text(json.dumps(row) + "\n", encoding="utf-8")
+    loaded = load_jsonl(path)
+    assert loaded[0].qid == "medqa_test_0000"
+    assert loaded[0].answer_text == "a"
+
+
+def test_load_jsonl_supports_qid_and_answer_text(tmp_path: Path):
+    path = tmp_path / "sample.jsonl"
+    row = {
+        "qid": "q1",
+        "question": "q",
+        "options": {"A": "a", "B": "b", "C": "c", "D": "d"},
+        "answer_text": "a",
+        "answer_idx": "A",
+    }
+    path.write_text(json.dumps(row) + "\n", encoding="utf-8")
+    loaded = load_jsonl(path)
+    assert loaded[0].qid == "q1"
+    assert loaded[0].answer_text == "a"
+
+
 def test_load_jsonl_skips_blank_lines(tmp_path: Path):
     path = tmp_path / "sample.jsonl"
     path.write_text(
