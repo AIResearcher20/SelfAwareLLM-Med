@@ -1,13 +1,21 @@
 from __future__ import annotations
 
+import csv
 from collections.abc import Iterable
 from dataclasses import dataclass
+from pathlib import Path
 
 from tqdm import tqdm
 
 from .data import MedQAItem
 from .model import ModelClient
-from .samplers import AdaptiveSampler, AUASSampler, FixedSampler, SampleOutcome, Sampler
+from .samplers import (
+    AdaptiveSampler,
+    AUASSampler,
+    FixedSampler,
+    SampleOutcome,
+    Sampler,
+)
 
 
 def build_samplers(config: dict) -> list[Sampler]:
@@ -23,16 +31,16 @@ def build_samplers(config: dict) -> list[Sampler]:
     )
     adaptive = AdaptiveSampler(
         threshold=config.get("adaptive", {}).get("threshold", 0.85),
-        min_samples=config.get("adaptive", {}).get("min_samples", 3),
-        max_samples=config.get("adaptive", {}).get("max_samples", 10),
+        min_samples=config.get("adaptive", {}).get("min_samples", 4),
+        max_samples=config.get("adaptive", {}).get("max_samples", 5),
         consistency_temperature=ct,
         evaluation_temperature=et,
         base_seed=seed,
     )
     auas = AUASSampler(
         uncertainty_threshold=config.get("auas", {}).get("uncertainty_threshold", 0.15),
-        min_samples=config.get("auas", {}).get("min_samples", 2),
-        max_samples=config.get("auas", {}).get("max_samples", 10),
+        min_samples=config.get("auas", {}).get("min_samples", 4),
+        max_samples=config.get("auas", {}).get("max_samples", 5),
         consistency_temperature=ct,
         evaluation_temperature=et,
         base_seed=seed,
@@ -46,6 +54,7 @@ class RunRecord:
     method: str
     consistency: float | None
     rouge_l: float | None
+    accuracy: float | None
     n_consistency_samples: int
     stop_reason: str
     valid_responses: int
@@ -60,13 +69,51 @@ class RunRecord:
         return cls(**o.as_dict())
 
 
+def save_responses_csv(
+    outcomes: list[SampleOutcome], out_dir: str | Path
+) -> dict[str, Path]:
+    out_dir = Path(out_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    paths: dict[str, Path] = {}
+
+    by_method: dict[str, list[SampleOutcome]] = {}
+    for o in outcomes:
+        by_method.setdefault(o.method, []).append(o)
+
+    for method, outs in by_method.items():
+        path = out_dir / f"responses_{method}.csv"
+        with path.open("w", encoding="utf-8", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow(
+                [
+                    "qid",
+                    "evaluation_response",
+                    "evaluation_starts_with_letter",
+                    "consistency_responses",
+                ]
+            )
+            for o in outs:
+                writer.writerow(
+                    [
+                        o.qid,
+                        o.evaluation_response or "",
+                        int(o.evaluation_starts_with_letter),
+                        " ||| ".join(o.consistency_responses),
+                    ]
+                )
+        paths[method] = path
+
+    return paths
+
+
 def run_experiment(
     items: Iterable[MedQAItem],
     client: ModelClient,
     config: dict,
-) -> list[RunRecord]:
+) -> tuple[list[RunRecord], list[SampleOutcome]]:
     samplers = build_samplers(config)
     records: list[RunRecord] = []
+    raw_outcomes: list[SampleOutcome] = []
 
     items_list = list(items)
     total = len(items_list) * len(samplers)
@@ -82,6 +129,7 @@ def run_experiment(
                         method=sampler.name,
                         consistency=None,
                         rouge_l=None,
+                        accuracy=None,
                         n_consistency_samples=0,
                         stop_reason="exception",
                         valid_responses=0,
@@ -92,6 +140,7 @@ def run_experiment(
                         error=f"{type(e).__name__}: {e}",
                     )
                 records.append(RunRecord.from_outcome(outcome))
+                raw_outcomes.append(outcome)
                 bar.update(1)
 
-    return records
+    return records, raw_outcomes
