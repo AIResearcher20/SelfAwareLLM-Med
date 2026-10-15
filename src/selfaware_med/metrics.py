@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from rouge_score import rouge_scorer
 
-
 _scorer = rouge_scorer.RougeScorer(["rougeL"], use_stemmer=True)
 
 
