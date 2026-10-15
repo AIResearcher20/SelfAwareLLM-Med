@@ -40,7 +40,7 @@ def test_fixed_sampler_with_failures_marks_error_but_keeps_running():
     out = sampler.run(_item(), client)
 
     assert out.failed_responses > 0
-    assert out.error in {"insufficient_valid_responses", None}
+    assert out.error is not None
 
 
 def test_adaptive_sampler_stops_at_threshold_when_consistent():
