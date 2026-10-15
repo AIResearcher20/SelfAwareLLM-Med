@@ -100,8 +100,10 @@ def spearman_summary(df: pd.DataFrame) -> dict:
             valid_acc["consistency"], valid_acc["accuracy"]
         )
 
-        if "evaluation_starts_with_letter" in sub.columns:
-            letter_rate = float(sub["evaluation_starts_with_letter"].mean())
+        if "evaluation_starts_with_letter" in sub.columns and len(sub) > 0:
+            letter_rate = float(
+                sub["evaluation_starts_with_letter"].astype(bool).mean()
+            )
         else:
             letter_rate = None
 
