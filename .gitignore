@@ -10,13 +10,9 @@ htmlcov/
 
 data/*.jsonl
 data/*.zip
-!data/sample_100.jsonl
+!data/sample_1000.jsonl
 
 cache/
-results/*.csv
-results/*.png
-results/*.json
-!results/README.md
 
 .DS_Store
 .idea/
