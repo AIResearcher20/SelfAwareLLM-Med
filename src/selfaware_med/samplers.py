@@ -1,13 +1,13 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Protocol
 
 import numpy as np
 
 from .consistency import mean_pairwise
 from .data import MedQAItem, format_prompt, reference_answer
-from .metrics import rouge_l
+from .metrics import mc_accuracy, rouge_l, starts_with_option_letter
 from .model import ModelClient
 
 
@@ -17,6 +17,7 @@ class SampleOutcome:
     method: str
     consistency: float | None
     rouge_l: float | None
+    accuracy: float | None
     n_consistency_samples: int
     stop_reason: str
     valid_responses: int
@@ -25,6 +26,9 @@ class SampleOutcome:
     embedding_calls: int
     latency_s: float
     error: str | None = None
+    evaluation_response: str | None = None
+    evaluation_starts_with_letter: bool = False
+    consistency_responses: list[str] = field(default_factory=list)
 
     def as_dict(self) -> dict:
         return {
@@ -32,6 +36,7 @@ class SampleOutcome:
             "method": self.method,
             "consistency": self.consistency,
             "rouge_l": self.rouge_l,
+            "accuracy": self.accuracy,
             "n_consistency_samples": self.n_consistency_samples,
             "stop_reason": self.stop_reason,
             "valid_responses": self.valid_responses,
@@ -107,7 +112,7 @@ class _BaseSampler:
 
     def _evaluate(
         self, item: MedQAItem, client: ModelClient
-    ) -> tuple[float | None, int, int, float]:
+    ) -> tuple[float | None, float | None, bool, str | None, int, int, float]:
         prompt = format_prompt(item)
         seed = self._seed_for(item, 10_000)
         g = client.generate(
@@ -117,10 +122,13 @@ class _BaseSampler:
         latency = g.latency_s
 
         if not g.ok:
-            return None, gen_calls, 1, latency
+            return None, None, False, None, gen_calls, 1, latency
 
         ref = reference_answer(item)
-        return rouge_l(g.text, ref), gen_calls, 0, latency
+        rl = rouge_l(g.text, ref)
+        acc = mc_accuracy(g.text, item)
+        letter = starts_with_option_letter(g.text, item)
+        return rl, acc, letter, g.text, gen_calls, 0, latency
 
 
 class FixedSampler(_BaseSampler):
@@ -147,24 +155,25 @@ class FixedSampler(_BaseSampler):
 
         consistency = mean_pairwise(vectors)
 
-        eval_rouge, eval_gen_calls, eval_failed, eval_latency = self._evaluate(
+        rl, acc, letter, eval_text, eval_gen, eval_failed, eval_lat = self._evaluate(
             item, client
         )
-        gen_calls += eval_gen_calls
+        gen_calls += eval_gen
         failed += eval_failed
-        latency += eval_latency
+        latency += eval_lat
 
         error = None
         if consistency is None:
             error = "insufficient_valid_responses"
-        elif eval_rouge is None:
+        elif eval_text is None:
             error = "evaluation_generation_failed"
 
         return SampleOutcome(
             qid=item.qid,
             method=self.name,
             consistency=consistency,
-            rouge_l=eval_rouge,
+            rouge_l=rl,
+            accuracy=acc,
             n_consistency_samples=len(vectors),
             stop_reason="fixed",
             valid_responses=len(vectors),
@@ -173,6 +182,9 @@ class FixedSampler(_BaseSampler):
             embedding_calls=len(vectors),
             latency_s=latency,
             error=error,
+            evaluation_response=eval_text,
+            evaluation_starts_with_letter=letter,
+            consistency_responses=list(texts),
         )
 
 
@@ -182,8 +194,8 @@ class AdaptiveSampler(_BaseSampler):
     def __init__(
         self,
         threshold: float = 0.85,
-        min_samples: int = 3,
-        max_samples: int = 10,
+        min_samples: int = 4,
+        max_samples: int = 5,
         consistency_temperature: float = 1.0,
         evaluation_temperature: float = 0.7,
         base_seed: int | None = None,
@@ -198,6 +210,7 @@ class AdaptiveSampler(_BaseSampler):
     def run(self, item: MedQAItem, client: ModelClient) -> SampleOutcome:
         prompt = format_prompt(item)
 
+        texts: list[str] = []
         vectors: list[np.ndarray] = []
         gen_calls = 0
         failed = 0
@@ -206,12 +219,13 @@ class AdaptiveSampler(_BaseSampler):
         stop_reason = "max_samples"
 
         for k in range(self.max_samples):
-            _, new_vecs, g, f, lat = self._generate_batch(
+            new_texts, new_vecs, g, f, lat = self._generate_batch(
                 prompt, client, item, k, 1, self.consistency_temperature
             )
             gen_calls += g
             failed += f
             latency += lat
+            texts.extend(new_texts)
             vectors.extend(new_vecs)
 
             if len(vectors) < self.min_samples:
@@ -229,24 +243,25 @@ class AdaptiveSampler(_BaseSampler):
         if consistency is None and len(vectors) >= 2:
             consistency = mean_pairwise(vectors)
 
-        eval_rouge, eval_gen_calls, eval_failed, eval_latency = self._evaluate(
+        rl, acc, letter, eval_text, eval_gen, eval_failed, eval_lat = self._evaluate(
             item, client
         )
-        gen_calls += eval_gen_calls
+        gen_calls += eval_gen
         failed += eval_failed
-        latency += eval_latency
+        latency += eval_lat
 
         error = None
         if consistency is None:
             error = "insufficient_valid_responses"
-        elif eval_rouge is None:
+        elif eval_text is None:
             error = "evaluation_generation_failed"
 
         return SampleOutcome(
             qid=item.qid,
             method=self.name,
             consistency=consistency,
-            rouge_l=eval_rouge,
+            rouge_l=rl,
+            accuracy=acc,
             n_consistency_samples=len(vectors),
             stop_reason=stop_reason,
             valid_responses=len(vectors),
@@ -255,6 +270,9 @@ class AdaptiveSampler(_BaseSampler):
             embedding_calls=len(vectors),
             latency_s=latency,
             error=error,
+            evaluation_response=eval_text,
+            evaluation_starts_with_letter=letter,
+            consistency_responses=list(texts),
         )
 
 
@@ -264,8 +282,8 @@ class AUASSampler(AdaptiveSampler):
     def __init__(
         self,
         uncertainty_threshold: float = 0.15,
-        min_samples: int = 2,
-        max_samples: int = 10,
+        min_samples: int = 4,
+        max_samples: int = 5,
         consistency_temperature: float = 1.0,
         evaluation_temperature: float = 0.7,
         base_seed: int | None = None,
