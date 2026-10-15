@@ -22,7 +22,9 @@ def _normalize_row(row: dict, fallback_qid: str) -> MedQAItem:
 
     qid = row.get("question_id") or row.get("qid") or row.get("id") or fallback_qid
     answer_idx = row.get("answer_idx") or ""
-    answer_text = row.get("answer") or row.get("answer_text") or options.get(answer_idx, "")
+    answer_text = (
+        row.get("answer") or row.get("answer_text") or options.get(answer_idx, "")
+    )
 
     return MedQAItem(
         qid=str(qid),
@@ -111,8 +113,9 @@ def write_jsonl(items: list[MedQAItem], path: str | Path) -> None:
 def format_prompt(item: MedQAItem) -> str:
     opts = "\n".join(f"{k}. {v}" for k, v in sorted(item.options.items()))
     return (
-        "You are answering a USMLE-style medical question. "
-        "Give a short final answer.\n\n"
+        "You are answering a USMLE-style multiple-choice medical question.\n"
+        "Respond with a single letter (A, B, C, or D) followed by the answer text.\n"
+        "Do not include explanations, reasoning, or any additional text.\n\n"
         f"Question: {item.question}\n\n"
         f"Options:\n{opts}\n\n"
         "Answer:"
