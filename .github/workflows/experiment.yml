@@ -39,7 +39,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.ollama
-          key: ollama-${{ runner.os }}-qwen3-4b-nomic-embed-text
+          key: ollama-${{ runner.os }}-llama3.2-3b-nomic-embed-text
 
       - name: start ollama
         run: |
@@ -48,7 +48,7 @@ jobs:
 
       - name: pull models
         run: |
-          ollama pull qwen3:4b
+          ollama pull llama3.2:3b
           ollama pull nomic-embed-text
           ollama list
 
@@ -83,7 +83,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: results-qwen3-${{ inputs.source }}-${{ inputs.num_questions }}
+          name: results-${{ inputs.source }}-${{ inputs.num_questions }}
           path: |
             results/*.csv
             results/*.png
