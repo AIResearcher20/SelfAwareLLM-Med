@@ -98,3 +98,23 @@ def test_outcome_generation_calls_account_for_evaluation():
     out = sampler.run(_item(), client)
     assert out.generation_calls == 4
     assert out.embedding_calls == 3
+
+
+def test_outcome_includes_accuracy_and_responses():
+    client = FakeModelClient()
+    sampler = FixedSampler(n_samples=3, base_seed=5)
+    out = sampler.run(_item(), client)
+
+    assert out.accuracy is not None
+    assert out.accuracy in {0.0, 1.0}
+    assert out.evaluation_response is not None
+    assert len(out.consistency_responses) == 3
+
+
+def test_adaptive_defaults_to_new_min_max():
+    a = AdaptiveSampler()
+    u = AUASSampler()
+    assert a.min_samples == 4
+    assert a.max_samples == 5
+    assert u.min_samples == 4
+    assert u.max_samples == 5
