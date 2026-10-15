@@ -1,14 +1,13 @@
 from __future__ import annotations
 
-import time
-from dataclasses import dataclass, field
-from typing import Iterable
+from collections.abc import Iterable
+from dataclasses import dataclass
 
 from tqdm import tqdm
 
 from .data import MedQAItem
 from .model import ModelClient
-from .samplers import AUASSampler, AdaptiveSampler, FixedSampler, SampleOutcome, Sampler
+from .samplers import AdaptiveSampler, AUASSampler, FixedSampler, SampleOutcome, Sampler
 
 
 def build_samplers(config: dict) -> list[Sampler]:
@@ -57,7 +56,7 @@ class RunRecord:
     error: str | None
 
     @classmethod
-    def from_outcome(cls, o: SampleOutcome) -> "RunRecord":
+    def from_outcome(cls, o: SampleOutcome) -> RunRecord:
         return cls(**o.as_dict())
 
 
