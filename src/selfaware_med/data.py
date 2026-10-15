@@ -15,32 +15,42 @@ class MedQAItem:
     answer_text: str
 
 
-def _item_from_hf(row: dict, idx: int) -> MedQAItem:
+def _normalize_row(row: dict, fallback_qid: str) -> MedQAItem:
     options = row.get("options") or {}
     if isinstance(options, str):
         options = json.loads(options)
 
-    answer_idx = row.get("answer_idx") or row.get("answer") or ""
-    answer_text = options.get(answer_idx, "")
+    qid = row.get("question_id") or row.get("qid") or row.get("id") or fallback_qid
+    answer_idx = row.get("answer_idx") or ""
+    answer_text = row.get("answer") or row.get("answer_text") or options.get(answer_idx, "")
 
     return MedQAItem(
-        qid=row.get("id") or f"hf_{idx}",
+        qid=str(qid),
         question=row["question"],
         options={k: v for k, v in options.items()},
-        answer_idx=answer_idx,
+        answer_idx=str(answer_idx),
         answer_text=answer_text,
     )
 
 
+def _item_from_hf(row: dict, idx: int) -> MedQAItem:
+    return _normalize_row(row, fallback_qid=f"hf_{idx}")
+
+
 def load_hf(
-    dataset_name: str = "GBaker/MedQA-USMLE-4-options",
+    dataset_name: str = "awinml/medqa",
+    config: str | None = "questions",
     split: str = "test",
     limit: int | None = None,
     seed: int = 13,
 ) -> list[MedQAItem]:
     from datasets import load_dataset
 
-    ds = load_dataset(dataset_name, split=split)
+    if config:
+        ds = load_dataset(dataset_name, config, split=split)
+    else:
+        ds = load_dataset(dataset_name, split=split)
+
     items = [_item_from_hf(dict(row), i) for i, row in enumerate(ds)]
 
     if limit is not None and limit < len(items):
@@ -55,30 +65,26 @@ def load_jsonl(path: str | Path) -> list[MedQAItem]:
     path = Path(path)
     items: list[MedQAItem] = []
     with path.open("r", encoding="utf-8") as f:
-        for line in f:
+        for i, line in enumerate(f):
             line = line.strip()
             if not line:
                 continue
             row = json.loads(line)
-            items.append(
-                MedQAItem(
-                    qid=row["qid"],
-                    question=row["question"],
-                    options=row["options"],
-                    answer_idx=row["answer_idx"],
-                    answer_text=row["answer_text"],
-                )
-            )
+            items.append(_normalize_row(row, fallback_qid=f"row_{i}"))
     return items
 
 
 def filter_by_ids(items: list[MedQAItem], ids_path: str | Path) -> list[MedQAItem]:
     path = Path(ids_path)
-    wanted = [line.strip() for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+    wanted = [
+        line.strip()
+        for line in path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
     by_id = {it.qid: it for it in items}
     missing = [qid for qid in wanted if qid not in by_id]
     if missing:
-        raise KeyError(f"{len(missing)} sample_ids not found in dataset, first: {missing[0]}")
+        raise KeyError(f"{len(missing)} sample_ids not found, first: {missing[0]}")
     return [by_id[qid] for qid in wanted]
 
 
@@ -90,11 +96,11 @@ def write_jsonl(items: list[MedQAItem], path: str | Path) -> None:
             f.write(
                 json.dumps(
                     {
-                        "qid": it.qid,
+                        "question_id": it.qid,
                         "question": it.question,
                         "options": it.options,
+                        "answer": it.answer_text,
                         "answer_idx": it.answer_idx,
-                        "answer_text": it.answer_text,
                     },
                     ensure_ascii=False,
                 )
