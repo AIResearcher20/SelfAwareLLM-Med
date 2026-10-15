@@ -8,7 +8,6 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
 from scipy import stats
 
@@ -74,13 +73,13 @@ def spearman_summary(df: pd.DataFrame) -> dict:
     return summary
 
 
-def plot_consistency_vs_rouge(
-    df: pd.DataFrame, out_path: str | Path
-) -> None:
+def plot_consistency_vs_rouge(df: pd.DataFrame, out_path: str | Path) -> None:
     methods = sorted(df["method"].unique())
-    fig, axes = plt.subplots(1, len(methods), figsize=(4 * len(methods), 4), squeeze=False)
+    fig, axes = plt.subplots(
+        1, len(methods), figsize=(4 * len(methods), 4), squeeze=False
+    )
 
-    for ax, method in zip(axes[0], methods):
+    for ax, method in zip(axes[0], methods, strict=False):
         sub = df[(df["method"] == method)].dropna(subset=["consistency", "rouge_l"])
         ax.scatter(sub["consistency"], sub["rouge_l"], s=12, alpha=0.6)
         ax.set_title(method)
