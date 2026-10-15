@@ -63,10 +63,13 @@ class RunRecord:
     embedding_calls: int
     latency_s: float
     error: str | None
+    evaluation_starts_with_letter: bool
 
     @classmethod
     def from_outcome(cls, o: SampleOutcome) -> RunRecord:
-        return cls(**o.as_dict())
+        d = o.as_dict()
+        d["evaluation_starts_with_letter"] = o.evaluation_starts_with_letter
+        return cls(**d)
 
 
 def save_responses_csv(
