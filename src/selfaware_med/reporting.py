@@ -100,11 +100,10 @@ def spearman_summary(df: pd.DataFrame) -> dict:
             valid_acc["consistency"], valid_acc["accuracy"]
         )
 
-        letter_rate = (
-            float(sub["evaluation_starts_with_letter"].mean())
-            if "evaluation_starts_with_letter" in sub
-            else None
-        )
+        if "evaluation_starts_with_letter" in sub.columns:
+            letter_rate = float(sub["evaluation_starts_with_letter"].mean())
+        else:
+            letter_rate = None
 
         summary[method] = {
             "n": n,
@@ -127,6 +126,7 @@ def spearman_summary(df: pd.DataFrame) -> dict:
             "mean_embedding_calls": float(sub["embedding_calls"].mean()),
             "mean_latency_s": float(sub["latency_s"].mean()),
             "error_count": int(sub["error"].notna().sum()),
+            "evaluation_letter_rate": letter_rate,
             "stop_reason_counts": _stop_reason_counts(sub),
             "consistency_group_analysis": _consistency_group_accuracy(sub),
             "accuracy_by_sample_count": _accuracy_by_sample_count(sub),
