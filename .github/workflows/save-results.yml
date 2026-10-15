@@ -4,23 +4,24 @@ on:
   workflow_dispatch:
     inputs:
       run_id:
-        description: "Workflow run ID that produced the artifact"
+        description: "Workflow run ID"
         required: true
       artifact_name:
-        description: "Artifact name to download"
+        description: "Artifact name"
         required: true
         default: "results-jsonl-250"
+
+permissions:
+  contents: write
+  actions: read
 
 jobs:
   save:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: download artifact
+      - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: ${{ inputs.artifact_name }}
@@ -28,19 +29,19 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           path: downloaded
 
-      - name: copy into results
+      - name: Copy results
         run: |
           mkdir -p results
-          cp downloaded/*.csv results/ 2>/dev/null || true
-          cp downloaded/*.json results/ 2>/dev/null || true
-          cp downloaded/*.png results/ 2>/dev/null || true
-          ls -la results/
+          find downloaded -type f -name '*.csv' -exec cp -v {} results/ \;
+          find downloaded -type f -name '*.json' -exec cp -v {} results/ \;
+          find downloaded -type f -name '*.png' -exec cp -v {} results/ \;
+          ls -lah results/
 
-      - name: commit and push
+      - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add results/
           git diff --cached --quiet && echo "no changes" && exit 0
-          git commit -m "save results from run ${{ inputs.run_id }} (${{ inputs.artifact_name }})"
+          git commit -m "save results from run ${{ inputs.run_id }}"
           git push
