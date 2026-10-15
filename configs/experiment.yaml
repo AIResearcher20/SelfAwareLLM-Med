@@ -4,10 +4,10 @@ data:
   sample_ids_path: null
 
 model:
-  gen_model: llama3.2:3b
+  gen_model: qwen3:4b
   embed_model: nomic-embed-text
   base_url: http://localhost:11434
-  timeout_s: 120.0
+  timeout_s: 300.0
 
 seed: 13
 consistency_temperature: 1.0
