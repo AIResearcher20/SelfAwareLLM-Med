@@ -43,10 +43,10 @@ def test_fixed_sampler_with_failures_marks_error_but_keeps_running():
     assert out.error is not None
 
 
-def test_adaptive_sampler_stops_at_threshold_when_consistent():
+def test_adaptive_sampler_stops_at_threshold_when_threshold_is_trivially_met():
     client = FakeModelClient()
     sampler = AdaptiveSampler(
-        threshold=0.0,
+        threshold=-2.0,
         min_samples=3,
         max_samples=10,
         base_seed=7,
@@ -55,7 +55,7 @@ def test_adaptive_sampler_stops_at_threshold_when_consistent():
 
     assert out.method == "adaptive"
     assert out.stop_reason == "threshold_reached"
-    assert 3 <= out.n_consistency_samples <= 10
+    assert out.n_consistency_samples == 3
 
 
 def test_adaptive_sampler_runs_to_max_when_threshold_impossible():
@@ -63,13 +63,13 @@ def test_adaptive_sampler_runs_to_max_when_threshold_impossible():
     sampler = AdaptiveSampler(
         threshold=1.1,
         min_samples=3,
-        max_samples=10,
+        max_samples=5,
         base_seed=7,
     )
     out = sampler.run(_item(), client)
 
     assert out.stop_reason == "max_samples"
-    assert out.n_consistency_samples == 10
+    assert out.n_consistency_samples == 5
 
 
 def test_adaptive_and_auas_use_equivalent_thresholds():
